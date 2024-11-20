@@ -778,20 +778,31 @@
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <div class="card-title mb-4">
-                        <h6 class="m-0 me-2">Perbandingan Transaksi Tiap Departemen</h6>
-                        <p class="card-subtitle">Ringkasan Semua Departemen</p>
+                        <h6 class="m-0 me-2">Riwayat Transaksi</h6>
+                        <p class="card-subtitle">Ringkasan Keseluruhan Transaksi</p>
                     </div>
-                    <div class="d-flex align-items-center">
-                        <select id="dateRangeSelectTransaksi" class="form-select me-2" style="width: 140px;">
-                            <option value="week">Bulan ini</option>
-                            <option value="year">Tahun ini</option>
-                            <option value="custom">Custom</option>
-                        </select>
-                        <input type="text" id="dateRangePickerTransaksi" class="form-control me-2" placeholder="Atur rentang tanggal" style="display:none; width: 200px;">
-                        <button id="applyFilterTransaksi" class="btn btn-primary btn-sm">Terapkan</button>
+                    <div class="d-flex">
+                        <div class="d-flex align-items-center">
+                            <select id="departmentSelect" class="form-select me-2" style="width: 210px;">
+                                <option value="all">Semua Departemen</option>
+                                <option value="Sales">Sales</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Bussines">Bussines</option>
+                                <option value="HCD">HCD</option>
+                            </select>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <select id="dateRangeSelectTransaksi" class="form-select me-2" style="width: 140px;">
+                                <option value="month">Bulan ini</option>
+                                <option value="year">Tahun ini</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                            <input type="text" id="dateRangePickerTransaksi" class="form-control me-2" 
+                                   placeholder="Atur rentang tanggal" style="display:none; width: 200px;">
+                            <button id="applyFilterTransaksi" class="btn btn-primary btn-sm">Terapkan</button>
+                        </div>
                     </div>
                 </div>
-                <!-- Tambahkan wrapper dengan tinggi tetap -->
                 <div style="position: relative; height: 280px; width: 100%;">
                     <canvas class="p-3" id="weeklyReportChart"></canvas>
                 </div>
@@ -818,8 +829,8 @@
                 <div class="col-lg-8">
                     <div class="card-header d-flex justify-content-between">
                         <div>
-                            <h6 class="card-title mb-1">Aktivitas Pengguna</h5>
-                            <p class="card-subtitle">Laporan Semua Karywan</p>
+                            <h6 class="card-title mb-1">Aktivitas Karyawan</h5>
+                            <p class="card-subtitle">Laporan Semua Aktivitas Karywan</p>
                         </div>
                         <div class="dropdown">
                             <select id="select2Basic" class="select2 form-select form-select-lg form-select-sm" data-allow-clear="true">
@@ -832,6 +843,76 @@
                     </div>
                     <div class="card-body" style="position: relative;">
                         <div class="p-3" id="contributionChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-12 mb-6">
+        <div class="card">
+            <div class="row  g-0">
+                <div class="col-lg-9 mb-4 border-end">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5 class="m-0">Riwayat Perbandingan Transaksi</h5>
+                        <div class="d-flex">
+                            <div class="d-flex align-items-center">
+                                <select id="dateRangeSelectTransaksi" class="form-select me-2" style="width: 140px;">
+                                    <option value="month">Bulan ini</option>
+                                    <option value="year">Tahun ini</option>
+                                    <option value="custom">Custom</option>
+                                </select>
+                                <input type="text" id="dateRangePickerPerbandingan" class="form-control me-2" 
+                                       placeholder="Atur rentang tanggal" style="display:none; width: 200px;">
+                                <button id="applyFilterTransaksiPerbandingan" class="btn btn-primary btn-sm">Terapkan</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="incomeChart" height="400"></canvas>
+                    </div>
+                </div>
+        
+                <!-- Report Summary -->
+                <div class="col-lg-3 mb-4">
+                    <div class="card-header">
+                        <h5 class="m-0">Peringkat Tertinggi</h5>
+                        <small class="text-muted">Kalkulasi Di tahun sekarang</small>
+                    </div>
+                    <div class="card-body">
+                        <!-- Income -->
+                        <div class="bg-label-warning p-3 rounded mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0 mt-2">Sales</h6>
+                                    <h4 class="mb-0">IDR 420,845</h4>
+                                </div>
+                                <small class="text-success">+2.34k</small>
+                            </div>
+                        </div>
+    
+                        <!-- Expense -->
+                        <div class="bg-label-primary p-3 rounded mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0 mt-2">Marketing</h6>
+                                    <h4 class="mb-0">IDR 338,658</h4>
+                                </div>
+                                <small class="text-danger">-1.15k</small>
+                            </div>
+                        </div>
+    
+                        <!-- Profit -->
+                        <div class="bg-label-info p-3 rounded">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0 mt-2">Finance</h6>
+                                    <h4 class="mb-0">IDR 218,220</h4>
+                                </div>
+                                <small class="text-success">+1.35k</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1415,6 +1496,76 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const applyFilterTransaksiPerbandingan = document.getElementById('dateRangePickerTransaksi');
+            const dateRangePickerTransaksi = document.getElementById('dateRangePickerTransaksi');
+    
+            // Inisialisasi Flatpickr
+            const fp = flatpickr("#dateRangePickerTransaksi", {
+                mode: "range",
+                dateFormat: "Y-m-d",
+                theme: "material_blue",
+                onChange: function(selectedDates, dateStr, instance) {
+                    if (selectedDates.length === 2) {
+                        const diff = (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24);
+                        if (diff > 14) {
+                            // Tampilkan modal error
+                            const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                            errorModal.show();
+    
+                            // Hapus pilihan
+                            instance.clear();
+                        }
+                    }
+                },
+            });
+    
+            // Event listener untuk dropdown rentang waktu
+            document.getElementById('applyFilterTransaksiPerbandingan').addEventListener('change', function() {
+                const selectedValue = this.value;
+                const today = new Date();
+                
+                switch(selectedValue) {
+                    case 'week':
+                        // Minggu ini (Senin - Minggu saat ini)
+                        const startOfWeek = new Date(today.setDate(today.getDate() - today.getDay() + 1));
+                        const endOfWeek = new Date(today.setDate(today.getDate() - today.getDay() + 7));
+                        fp.setDate([startOfWeek, endOfWeek]);
+                        dateRangePickerTransaksi.style.display = 'none';
+                        break;
+                    
+                    case 'month':
+                        // Bulan ini
+                        const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+                        const endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+                        fp.setDate([startOfMonth, endOfMonth]);
+                        dateRangePickerTransaksi.style.display = 'none';
+                        break;
+                    
+                    case 'year':
+                        // Tahun ini
+                        const startOfYear = new Date(today.getFullYear(), 0, 1);
+                        const endOfYear = new Date(today.getFullYear(), 11, 31);
+                        fp.setDate([startOfYear, endOfYear]);
+                        dateRangePickerTransaksi.style.display = 'none';
+                        break;
+                    
+                    case 'custom':
+                        // Tampilkan date picker untuk custom
+                        dateRangePickerTransaksi.style.display = 'block';
+                        fp.clear();
+                        break;
+                    
+                    default:
+                        dateRangePickerTransaksi.style.display = 'none';
+                        fp.clear();
+                }
+            });
+        });
+    </script>
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
             const dateRangeSelect = document.getElementById('dateRangePicker');
             const dateRangePicker = document.getElementById('dateRangePicker');
     
@@ -1601,7 +1752,7 @@
                             opacityTo: 0.2,
                             stops: [0, 90, 100]
                         },
-                        opacity: [1, 0]  // Set opacity to 0 for the second series to remove shadow
+                        opacity: [1, 0]
                     },
                     stroke: {
                         curve: 'smooth',
@@ -1611,13 +1762,12 @@
                     xaxis: {
                         categories: data.categories,
                         labels: {
-                            rotate: 0, // Miringkan label
-                            // rotateAlways: true,
-                            maxHeight: 50, // Batasi ketinggian
+                            rotate: 0,
+                            maxHeight: 50,
                             style: {
                                 fontSize: '10px' // Perkecil ukuran font
                             },
-                            trim: true // Memotong label yang terlalu panjang
+                            trim: true 
                         },
                        
                     },
@@ -1809,134 +1959,192 @@
 
     
     <script>
+        // Data dummy transaksi per departemen
+        const transactionData = {
+            // Data untuk semua departemen
+            all: {
+                thisMonth: Array.from({ length: 20 }, (_, i) => ({
+                    date: `${i + 1} Nov`,
+                    value: Math.floor(Math.random() * (95 - 40) + 40)
+                })),
+                lastMonth: Array.from({ length: 20 }, (_, i) => ({
+                    date: `${i + 1} Oct`,
+                    value: Math.floor(Math.random() * (90 - 35) + 35)
+                })),
+                thisYear: Array.from({ length: 12 }, (_, i) => ({
+                    date: new Date(2024, i, 1).toLocaleString('id-ID', { month: 'short' }),
+                    value: Math.floor(Math.random() * (1000 - 600) + 600)
+                }))
+            },
+            
+            // Data untuk departemen Sales
+            Sales: {
+                thisMonth: Array.from({ length: 20 }, (_, i) => ({
+                    date: `${i + 1} Nov`,
+                    value: Math.floor(Math.random() * (85 - 30) + 30)
+                })),
+                lastMonth: Array.from({ length: 20 }, (_, i) => ({
+                    date: `${i + 1} Oct`,
+                    value: Math.floor(Math.random() * (80 - 25) + 25)
+                })),
+                thisYear: Array.from({ length: 12 }, (_, i) => ({
+                    date: new Date(2024, i, 1).toLocaleString('id-ID', { month: 'short' }),
+                    value: Math.floor(Math.random() * (900 - 500) + 500)
+                }))
+            },
+            
+            // Data untuk departemen Finance
+            Finance: {
+                thisMonth: Array.from({ length: 20 }, (_, i) => ({
+                    date: `${i + 1} Nov`,
+                    value: Math.floor(Math.random() * (75 - 20) + 20)
+                })),
+                lastMonth: Array.from({ length: 20 }, (_, i) => ({
+                    date: `${i + 1} Oct`,
+                    value: Math.floor(Math.random() * (70 - 15) + 15)
+                })),
+                thisYear: Array.from({ length: 12 }, (_, i) => ({
+                    date: new Date(2024, i, 1).toLocaleString('id-ID', { month: 'short' }),
+                    value: Math.floor(Math.random() * (800 - 400) + 400)
+                }))
+            },
+            
+            // Data untuk departemen Business
+            Bussines: {
+                thisMonth: Array.from({ length: 20 }, (_, i) => ({
+                    date: `${i + 1} Nov`,
+                    value: Math.floor(Math.random() * (90 - 35) + 35)
+                })),
+                lastMonth: Array.from({ length: 20 }, (_, i) => ({
+                    date: `${i + 1} Oct`,
+                    value: Math.floor(Math.random() * (85 - 30) + 30)
+                })),
+                thisYear: Array.from({ length: 12 }, (_, i) => ({
+                    date: new Date(2024, i, 1).toLocaleString('id-ID', { month: 'short' }),
+                    value: Math.floor(Math.random() * (950 - 550) + 550)
+                }))
+            },
+            
+            // Data untuk departemen HCD
+            HCD: {
+                thisMonth: Array.from({ length: 20 }, (_, i) => ({
+                    date: `${i + 1} Nov`,
+                    value: Math.floor(Math.random() * (70 - 15) + 15)
+                })),
+                lastMonth: Array.from({ length: 20 }, (_, i) => ({
+                    date: `${i + 1} Oct`,
+                    value: Math.floor(Math.random() * (65 - 10) + 10)
+                })),
+                thisYear: Array.from({ length: 12 }, (_, i) => ({
+                    date: new Date(2024, i, 1).toLocaleString('id-ID', { month: 'short' }),
+                    value: Math.floor(Math.random() * (700 - 300) + 300)
+                }))
+            }
+        };
+        
+        // Fungsi untuk mendapatkan data berdasarkan filter
+        function getFilteredData(department = 'all', timeRange = 'month', startDate = null, endDate = null) {
+            const deptData = transactionData[department] || transactionData.all;
+
+            switch (timeRange) {
+                case 'year':
+                    return {
+                        labels: deptData.thisYear.map((item, index) => {
+                            const lastYearMonth = new Date(2023, index, 1).toLocaleString('id-ID', { month: 'short' });
+                            const thisYearMonth = item.date;
+                            return `${lastYearMonth} / ${thisYearMonth}`;
+                        }),
+                        thisMonth: deptData.thisYear.map(item => item.value),
+                        lastMonth: deptData.thisYear.map(item => item.value * 0.9) // Simulasi data tahun lalu
+                    };
+                case 'custom':
+                    if (startDate && endDate) {
+                        const days = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
+                        const customData = Array.from({ length: days }, (_, i) => {
+                            const currentDate = new Date(startDate);
+                            currentDate.setDate(startDate.getDate() + i);
+                            return {
+                                date: formatDate(currentDate),
+                                value: Math.floor(Math.random() * (95 - 40) + 40)
+                            };
+                        });
+
+                        return {
+                            labels: customData.map(item => item.date),
+                            datasets: [
+                                {
+                                    label: `${formatDate(startDate)} - ${formatDate(endDate)}`,
+                                    data: customData.map(item => item.value),
+                                    backgroundColor: 'rgb(102, 199, 50)',
+                                    borderColor: '#696CFF',
+                                    barThickness: 20,
+                                    borderRadius: 4,
+                                    maxBarThickness: 15
+                                }
+                            ]
+                        };
+                    }
+                    return {
+                        labels: [],
+                        thisMonth: [],
+                        lastMonth: []
+                    };
+                default:
+                    return {
+                        labels: deptData.thisMonth.map(item => item.date),
+                        thisMonth: deptData.thisMonth.map(item => item.value),
+                        lastMonth: deptData.lastMonth.map(item => item.value)
+                    };
+            }
+        }
+        
         document.addEventListener("DOMContentLoaded", function () {
-            var bulan = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-            var dataTransaksi = [0,0,0,0,0,0,0,0,"599000","399000","2195000",0];
-
-            // Fungsi untuk memformat angka menjadi format Rupiah
-            const formatRupiah = (value) => {
-                return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(value).replace(/\u00A0/g, " ");
-            };
-
-            var options = {
-                series: [{
-                    name: 'Total Transaksi',
-                    data: dataTransaksi
-                }],
-                chart: {
-                    type: 'line',
-                    height: 310,
-                    toolbar: { show: false },
-                    dropShadow: {
-                        enabled: true,
-                        color: '#6365f1b3',
-                        top: 10,
-                        left: 0,
-                        blur: 5,
-                        opacity: 1,
-                        opacityTo: 0
-                    }
-                },
-                stroke: {
-                    curve: 'smooth',
-                    width: 3,
-                    colors: ['#6366F1']
-                },
-                fill: {
-                    type: 'gradient'
-                },
-                xaxis: {
-                    categories: bulan,
-                    labels: {
-                        style: {
-                            colors: '#9CA3AF'
-                        }
-                    }
-                },
-                yaxis: {
-                    labels: {
-                        formatter: (val) => `IDR ${val.toLocaleString('id-ID')}`,
-                        style: {
-                            colors: '#9CA3AF'
-                        }
-                    }
-                },
-                grid: {
-                    show: true,
-                    borderColor: '#E5E7EB',
-                    strokeDashArray: 7,
-                },
-                tooltip: {
-                    enabled: true,
-                    y: {
-                        formatter: (val) => formatRupiah(val) // Menggunakan fungsi formatRupiah
-                    }
-                },
-                markers: {
-                    size: 5,
-                    colors: ['#6366F1'],
-                    strokeColors: '#fff',
-                    strokeWidth: 2,
-                    hover: {
-                        size: 8
-                    }
-                }
-            };
-
-            var chart = new ApexCharts(document.querySelector("#chartriwayattransaksi"), options);
-            chart.render();
-        });
-    </script>
-
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
+            // Inisialisasi Datepicker untuk custom range
+            const dateRangePicker = document.getElementById('dateRangePickerTransaksi');
+            const dateRangeSelect = document.getElementById('dateRangeSelectTransaksi');
+            const departmentSelect = document.getElementById('departmentSelect');
+            const applyFilterBtn = document.getElementById('applyFilterTransaksi');
+            
+            // Toggle tampilan date range picker
+            dateRangeSelect.addEventListener('change', function() {
+                dateRangePicker.style.display = this.value === 'custom' ? 'block' : 'none';
+            });
+        
+            // Inisialisasi Chart
             const ctx = document.getElementById('weeklyReportChart');
             
-            // Data untuk grafik (tanggal 1 Nov - 20 Nov)
-            const labels = Array.from({ length: 20 }, (_, i) => `${i + 1} Nov`);
-            const thisMonthData = [40, 78, 82, 70, 72, 48, 75, 67, 54, 80, 72, 66, 85, 90, 78, 84, 70, 60, 50, 95];
-            const lastMonthData = [38, 76, 79, 68, 70, 46, 73, 64, 52, 78, 70, 63, 83, 88, 76, 82, 68, 58, 48, 93];
-    
-            // Hancurkan instance chart sebelumnya jika ada
-            if (window.weeklyChart instanceof Chart) {
-                window.weeklyChart.destroy();
-            }
-    
-            const data = {
-                labels: labels,
-                datasets: [
-                    {
-                        label: 'Bulan Ini',
-                        data: thisMonthData,
-                        backgroundColor: 'rgb(102, 199, 50)',
-                        borderColor: '#696CFF',
-                        barThickness: 20,
-                        borderRadius: 4,
-                        maxBarThickness: 15
-                    },
-                    {
-                        label: 'Bulan Lalu',
-                        data: lastMonthData,
-                        backgroundColor: 'rgb(198, 241, 175)',
-                        borderColor: '#E7E7FF',
-                        barThickness: 20,
-                        borderRadius: 4,
-                        maxBarThickness: 15
-                    }
-                ]
-            };
-    
-            // Konfigurasi grafik
+            // Konfigurasi default chart
             const config = {
                 type: 'bar',
-                data: data,
+                data: {
+                    labels: [],
+                    datasets: [
+                        {
+                            label: 'Bulan Ini',
+                            data: [],
+                            backgroundColor: 'rgb(102, 199, 50)',
+                            borderColor: '#696CFF',
+                            barThickness: 20,
+                            borderRadius: 4,
+                            maxBarThickness: 15
+                        },
+                        {
+                            label: 'Bulan Lalu',
+                            data: [],
+                            backgroundColor: 'rgb(198, 241, 175)',
+                            borderColor: '#E7E7FF',
+                            barThickness: 20,
+                            borderRadius: 4,
+                            maxBarThickness: 15
+                        }
+                    ]
+                },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
                         legend: {
-                            display: true,
+                            display: false,
                         },
                         tooltip: {
                             backgroundColor: '#fff',
@@ -1992,16 +2200,82 @@
                     },
                 }
             };
-    
-            // Inisialisasi grafik dan simpan instance-nya
+        
+            // Inisialisasi chart
             window.weeklyChart = new Chart(ctx, config);
-    
-            // Tambahkan event listener untuk resize
+        
+            // Fungsi untuk update chart
+            function updateChart(data) {
+                if (window.weeklyChart) {
+                    window.weeklyChart.data.labels = data.labels;
+                    window.weeklyChart.data.datasets[0].data = data.thisMonth;
+                    window.weeklyChart.data.datasets[1].data = data.lastMonth;
+                    
+                    // Update max value di y axis berdasarkan data tertinggi
+                    const maxValue = Math.max(...data.thisMonth, ...data.lastMonth);
+                    window.weeklyChart.options.scales.y.max = Math.ceil(maxValue / 100) * 100;
+                    
+                    window.weeklyChart.update();
+                }
+            }
+        
+            // Event listener untuk filter departemen
+            departmentSelect.addEventListener('change', function() {
+                const department = this.value;
+                const timeRange = dateRangeSelect.value;
+                const data = getFilteredData(department, timeRange);
+                updateChart(data);
+            });
+        
+            // Event listener untuk filter waktu
+            dateRangeSelect.addEventListener('change', function() {
+                const timeRange = this.value;
+                const department = departmentSelect.value;
+                const data = getFilteredData(department, timeRange);
+                updateChart(data);
+            });
+        
+            // Event listener untuk tombol apply filter
+            applyFilterBtn.addEventListener('click', function() {
+                const department = departmentSelect.value;
+                const timeRange = dateRangeSelect.value;
+                let startDate = null;
+                let endDate = null;
+        
+                if (timeRange === 'custom' && dateRangePicker.value) {
+                    // Parse tanggal dari date picker jika menggunakan custom range
+                    [startDate, endDate] = dateRangePicker.value.split(' - ').map(date => new Date(date));
+                }
+        
+                const data = getFilteredData(department, timeRange, startDate, endDate);
+                updateChart(data);
+            });
+        
+            // Load data awal
+            const initialData = getFilteredData();
+            updateChart(initialData);
+        
+            // Resize handler
             window.addEventListener('resize', function () {
                 if (window.weeklyChart) {
                     window.weeklyChart.resize();
                 }
             });
+        });
+
+        applyFilterBtn.addEventListener('click', function () {
+            const department = departmentSelect.value;
+            const timeRange = dateRangeSelect.value;
+            let startDate = null;
+            let endDate = null;
+
+            if (timeRange === 'custom' && dateRangePicker.value) {
+                // Parse tanggal dari date picker jika menggunakan custom range
+                [startDate, endDate] = dateRangePicker.value.split(' - ').map(date => new Date(date));
+            }
+
+            const data = getFilteredData(department, timeRange, startDate, endDate);
+            updateChart(data);
         });
     </script>
 
@@ -2180,8 +2454,14 @@
             const data = {
                 labels: ['Sales', 'HCD', 'Bussines', 'Finance', 'Marketing'],
                 datasets: [{
-                    data: (['32', '55', '15', '65', '22']),
-                    backgroundColor: ['#4477CE', '#8CABFF', '#CBDCEB'],
+                    data: ['32', '55', '15', '65', '22'],
+                    backgroundColor: [
+                        '#FF6384', // Merah Muda
+                        '#36A2EB', // Biru
+                        '#FFCE56', // Kuning
+                        '#4BC0C0', // Hijau Muda
+                        '#9966FF'  // Ungu
+                    ],
                     hoverOffset: 20,
                     borderRadius: 10
                 }]
@@ -2229,6 +2509,76 @@
                 document.getElementById('myDoughnutChart'),
                 config
             );
+        });
+    </script>
+
+    
+    <script>
+        // Chart initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('incomeChart').getContext('2d');
+            
+            const monthlyData = {
+                Sales: 3200,
+                Marketing: 3200,
+                Finance: 4800,
+                Logistik: 4800,
+                PPIC: 2800,
+                GA: 2800,
+                'BD RND': 1800,
+                Warehouse: 1800,
+                'Sales Mizzu': 3800,
+                QAC: 3800,
+                Produksi: 5500,
+                'dept ?': 5500
+            };
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: Object.keys(monthlyData),
+                    datasets: [{
+                        label: 'Riwayat Transaksi',
+                        data: Object.values(monthlyData),
+                        fill: true,
+                        borderColor: 'rgb(99, 102, 241)',
+                        backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                        tension: 0,
+                        pointRadius: 0,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: value => 'IDR ' + value + 'k'
+                            },
+                            grid: {
+                                borderDash: [5, 5]
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                        },
+                        hover: {
+                            mode: 'index',
+                            intersect: false
+                        }
+                    }
+                }
+            });
         });
     </script>
     <script src="http://127.0.0.1:8000/backend/assets/vendor/libs/jquery/jquery.js"></script>
