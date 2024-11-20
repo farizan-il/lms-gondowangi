@@ -146,7 +146,7 @@
   
             <ul class="menu-inner py-1">
                 <!-- Dashboards -->
-                <li class="menu-item ">
+                <li class="menu-item active">
                     <a href="/dashboard" class="menu-link menu-link">
                         <i class="menu-icon tf-icons bx bx-home-smile"></i>
                         <div class="text-truncate" data-i18n="Dashboards">Dashboard</div>
@@ -393,7 +393,7 @@
                     href="javascript:void(0);"
                     data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="backend/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="http://127.0.0.1:8000/backend/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                 </li>
@@ -408,169 +408,151 @@
 
             <!-- Content -->
             
-                
-<div class="container-xxl flex-grow-1 container-p-y">    
-    <nav class="navbar navbar-expand-lg border-secondary border-bottom mb-5">
+            <div class="container-xxl flex-grow-1 container-p-y">
+    <nav class="navbar navbar-expand-lg border-secondary border-bottom mb-12 ">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" aria-current="page" href="/dashboard.html">Overview</a>
+                        <a class="nav-link active text-primary" aria-current="page" href="javascript:void(0)">Overview</a>
                     </li>
                     <li class="nav-item"><a class="nav-link">|</a></li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="/dashboarddeapartemen">Departemen</a>
+                        <a class="nav-link text-secondary" href="/pemantauanTraining">Laporan Training</a>
                     </li>
                     <li class="nav-item"><a class="nav-link">|</a></li>
                     <li class="nav-item">
-                        <a class="nav-link active text-primary" href="/dashboard.html">Karyawan</a>
+                        <a class="nav-link text-secondary" href="/dashboardkaryawan">Karyawan</a>
                     </li>
                     <li class="nav-item"><a class="nav-link">|</a></li>
                 </ul>
-                <select id="select2Basic" class="select2 form-select w-20 form-select-md me-4" data-allow-clear="true">
-                    <option value="" disabled selected>Pilih Departemen</option>
-                    <option value="9d3ddb09-3389-4a81-82ae-26612ad2a776">PPIC &amp; Logistik</option>
-                    <option value="9d3ddb29-dd0a-4611-9d53-79c74cde9081">Produksi</option>
-                    <option value="9d3ddd06-daf5-497e-a4f3-28b7b862897a">HCD</option>
-                    <option value="9d7bd8ed-d1dc-4810-b5b5-f463b82e1c80">Sales</option>
-                    <option value="9d3c3bb7-f58d-4cbb-90f6-61f55216393a">IT</option>
-                                    </select>
-                <select id="select2Basic" class="select2 form-select w-20 form-select-md me-4" data-allow-clear="true">
-                    <option value="" disabled selected>Pilih Karyawan</option>
-                                            <option value="9d237165-0c53-456e-ac31-09b2657ceec2">Betrand Russel</option>
-                                            <option value="9d237165-0c53-456e-ac31-09b2657ceec2">Farizan</option>
-                                            <option value="9d3c4396-b9f6-4b81-b04d-c73f83e9e944">lemon</option>
-                                            <option value="9d69c1ae-3931-4f62-83d0-9055ae1c554c">Seteven Cury</option>
-                                            <option value="9d69c846-b07a-4295-a916-5e6fb85d3df6">Jhon Chena</option>
-                                            <option value="9d7bd944-a74e-4f5b-bac3-731ca0e6b94f">Keanu Reaves</option>
-                                    </select>
                 <form class="d-flex" onsubmit="return false">
-                    <button class="btn btn-primary btn-sm p-2" type="submit">
-                        <i class='bx bxs-cloud-download me-2'></i> export
-                    </button>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary btn-sm py-0 px-2" type="submit"><i class='bx bxs-cloud-download me-2'></i> export</button>
                 </form>
             </div>
         </div>
-    </nav>      
-    
-    <!-- Topic and Instructors -->
-    <div class="row mb-6 g-6">
-        <div class="col-xl-8 col-md-6">
+    </nav>
+
     <div class="row">
-        <div class="col-sm-6 col-lg-4 mb-6">
-            <div class="card card-border-shadow-primary h-100">
+        <!-- Total Kelas -->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-6">
+            <div class="card">
                 <div class="card-body">
-                    <div class="d-flex align-items-center mb-2">
+                    <div class="card-title d-flex align-items-start justify-content-between mb-4">
                         <div class="avatar me-4">
-                            <span class="avatar-initial rounded bg-label-primary"><i class='bx bxs-videos bx-sm'></i></span>
+                            <span class="avatar-initial rounded bg-label-primary"><i class='bx bx-book-open bx-sm'></i></span>
                         </div>
-                        <h4 class="mb-0">1</h4>
-                    </div>
-                    <p class="mb-2">Total kelas yang dibeli</p>
-                    <p class="mb-0">
-                        <span class="text-heading fw-medium me-2">+1</span>
-                        <span class="text-muted">bulan ini</span>
-                    </p>
-                </div> 
-            </div>
-        </div>
-
-        <!-- Card Kelas Dalam Proses -->
-        <div class="col-sm-6 col-lg-4 mb-6">
-            <div class="card card-border-shadow-danger h-100">
-                <div class="card-body">
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="avatar me-4">
-                            <span class="avatar-initial rounded bg-label-danger"><i class='bx bx-error bx-sm'></i></span>
-                        </div>
-                        <h4 class="mb-0">1</h4>
-                        <a href="#detailprogress" class="btn btn-label-danger p-1 ms-auto" id="detail" role="button">detail</a>
-                    </div>
-                    <p class="mb-2">Kelas dalam proses</p>
-                    <p class="mb-0">
-                        <span class="text-muted text-danger">selesaikan sekarang</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card Kelas Selesai -->
-        <div class="col-sm-6 col-lg-4 mb-6">
-            <div class="card card-border-shadow-success h-100">
-                <div class="card-body">
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="avatar me-4">
-                            <span class="avatar-initial rounded bg-label-success"><i class='bx bx-git-repo-forked bx-sm'></i></span>
-                        </div>
-                        <h4 class="mb-0 me-2">0</h4>
-                    </div>
-                    <p class="mb-2">Kelas selesai</p>
-                    <p class="mb-0">
-                        
-                        <span class="text-muted">Total keseluruhan</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card Kelas Tidak Tuntas -->
-        <div class="col-sm-6 col-lg-4 mb-6">
-            <div class="card card-border-shadow-warning h-100">
-                <div class="card-body">
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="avatar me-4">
-                            <span class="avatar-initial rounded bg-label-warning"><i class='bx bx-task-x bx-sm'></i></span>
-                        </div>
-                        <h4 class="mb-0 me-2">0</h4>
-                    </div>
-                    <p class="mb-2">Kelas tidak tuntas</p>
-                    <p class="mb-0">
-                        <span class="text-heading fw-medium me-2">+0</span>
-                        <span class="text-muted">bulan ini</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-lg-4 mb-6">
-            <div class="card card-border-shadow-success h-100">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div class="card-info">
-                            <p class="text-heading mb-1">Pengeluaran</p>
-                            <div class="d-flex align-items-center mb-1">
-                                <h4 class="card-title mb-0 me-2">IDR 399.000</h4>
-                                
-                            </div>
-                            <span>Total keseluruhan</span>
-                        </div>
-                        <div class="card-icon">
-                            <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalCenter">
-                                detail
+                        <div class="dropdown">
+                            <button class="btn p-0" type="button" id="cardOpt1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-dots-vertical-rounded text-muted"></i>
                             </button>
-                            
+                            <div class="dropdown-menu" aria-labelledby="cardOpt1">
+                                <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                            </div>
                         </div>
                     </div>
+                    <p class="mb-1">Total Kelas: 
+                        <small class="text-primary fw-bold"> 46</small>
+                        <button type="button" class="btn btn-white btn-sm px-1 mb-0" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="<span>Ini adalah kelas yang baru ditambahkan di bulan ini</span>">
+                            <i class='bx bxs-help-circle text-primary' ></i>
+                        </button>
+                    </p>
                 </div>
             </div>
         </div>
-
-        <div class="col-sm-6 col-lg-4 mb-6">
-            <div class="card card-border-shadow-info h-100">
+    
+        <!-- Kelas Baru -->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-6">
+            <div class="card">
                 <div class="card-body">
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="avatar me-3">
-                            <span class="avatar-initial rounded bg-label-info"><i class='bx bx-credit-card-alt bx-sm'></i></span>
+                    <div class="card-title d-flex align-items-start justify-content-between mb-4">
+                        <div class="avatar me-4">
+                            <span class="avatar-initial rounded bg-label-slack"><i class='bx bx-book-add bx-sm'></i></span>
                         </div>
-                        <h4 class="mb-0">801.000</h4>
-                        <button type="button" class="btn btn-white btn-lg p-1" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="<span>Ini adalah coin yang dimiliki karyawan dibulan ini</span>">
-                            <i class='bx bxs-help-circle text-info' ></i>
-                        </button>
                     </div>
-                    <p class="mb-2">Sisa Coin Anda</p>
-                    <p class="mb-0">
-                    
-                    <span class="text-muted">Total keseluruhan</span>
+                    <p class="mb-1">Kelas Baru: 
+                        <small class="text-danger fw-bold"> 46</small>
+                        <button type="button" class="btn btn-white btn-sm px-1 mb-0" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="<span>Ini adalah kelas yang baru ditambahkan di bulan ini</span>">
+                            <i class='bx bxs-help-circle text-danger' ></i>
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Video Pembelajaran -->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title d-flex align-items-start justify-content-between mb-4">
+                        <div class="avatar me-4">
+                            <span class="avatar-initial rounded bg-label-danger"><i class='bx bx-play-circle bx-sm'></i></span>
+                        </div>
+                    </div>
+                    <p class="mb-1">Video:
+                        <small class="text-danger fw-bold"> 62</small>
+                        <button type="button" class="btn btn-white btn-sm px-1 mb-0" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="<span>Ini adalah kelas yang baru ditambahkan di bulan ini</span>">
+                            <i class='bx bxs-help-circle text-danger' ></i>
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Kuis dan Test -->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title d-flex align-items-start justify-content-between mb-4">
+                        <div class="avatar me-4">
+                            <span class="avatar-initial rounded bg-label-warning"><i class='bx bx-edit-alt bx-sm'></i></span>
+                        </div>
+                    </div>
+                    <p class="mb-1">Kuis dan Test
+                        <small class="text-warning fw-bold"> 62</small>
+                        <button type="button" class="btn btn-white btn-sm px-1 mb-0" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="<span>Ini adalah kelas yang baru ditambahkan di bulan ini</span>">
+                            <i class='bx bxs-help-circle text-slack' ></i>
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Total Karyawan -->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title d-flex align-items-start justify-content-between mb-4">
+                        <div class="avatar me-4">
+                            <span class="avatar-initial rounded bg-label-info"><i class='bx bx-user bx-sm'></i></span>
+                        </div>
+                    </div>
+                    <p class="mb-1">Total Karyawan
+                        <small class="text-info fw-bold"> 62</small>
+                        <button type="button" class="btn btn-white btn-sm px-1 mb-0" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="<span>Ini adalah kelas yang baru ditambahkan di bulan ini</span>">
+                            <i class='bx bxs-help-circle text-slack' ></i>
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Karyawan Sedang Online -->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title d-flex align-items-start justify-content-between mb-4">
+                        <div class="avatar me-4">
+                            <span class="avatar-initial rounded bg-label-success"><i class='bx bx-user-check bx-sm'></i></span>
+                        </div>
+                    </div>
+                    <p class="mb-1">Online
+                        <small class="text-success fw-bold"> 62</small>
+                        <button type="button" class="btn btn-white btn-sm px-1 mb-0" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="<span>Data ini adalah total karyawan yang sedang membuka aplikasi lms </span>">
+                            <i class='bx bxs-help-circle text-slack' ></i>
+                        </button>
                     </p>
                 </div>
             </div>
@@ -578,441 +560,810 @@
     </div>
 
     
-    <div class="card">
-        <div class="row row-bordered g-0">
-            <div class="col-lg-8">
+    <div class="row mb-6 g-6">
+        <div class="col-lg-8">
+            <div class="card">
                 <div class="card-header d-flex align-items-center justify-content-between">
                     <div class="card-title mb-0">
-                        <h5 class="m-0 me-2">Waktu yang dihabiskan</h5>
+                        <h6 class="m-0 me-2">Waktu yang dihabiskan</h6>
+                        <p class="card-subtitle">Ringkasan Semua Departemen</p>
                     </div>
-                    <div class="d-flex">
-                        <form class="d-flex">
-                            <input type="text" id="dateRangePickerKaryawan" class="form-control me-2" placeholder="Atur rentang tanggal">
-                            <button type="submit" class="btn btn-primary btn-sm">Terapkan</button>
-                        </form>
-                        
-                    </div>
-                </div>
-                <canvas id="shipmentDeliveryChart"></canvas>
-            </div>
-
-            
-            <div class="col-lg-4 align-items-bottom">
-                <div class="card-header d-flex align-items-center justify-content-between">
-                    <div class="card-title mb-0">
-                        <h5 class="m-0 me-2">Statistik Status Kelas</h5>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn p-0" type="button" id="totalRevenue" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="bx bx-dots-vertical-rounded bx-sm text-muted"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalRevenue">
-                        <a class="dropdown-item" href="javascript:void(0);">Select All</a>
-                        <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-                        <a class="dropdown-item" href="javascript:void(0);">Share</a>
-                        </div>
+                    <div class="d-flex align-items-center">
+                        <select id="dateRangeSelect" class="form-select me-2" style="width: 200px;">
+                            <option value="week">Minggu Ini</option>
+                            <option value="month">Bulan Sebelumnya</option>
+                            <option value="year">Tahun Ini</option>
+                            <option value="custom">Custom</option>
+                        </select>
+                        <input type="text" id="dateRangePicker" class="form-control me-2" placeholder="Atur rentang tanggal" style="display:none; width: 200px;">
+                        <button id="applyFilter" class="btn btn-primary btn-sm">Terapkan</button>
                     </div>
                 </div>
                 <div class="card-body">
-                    <canvas id="myDoughnutChart" width="400" height="400"></canvas>
+                    <div id="SpentTimeChart"></div>
                 </div>
             </div>
         </div>
-    </div>
 
-    
-    <div class="card mt-5">
-        <div class="row row-bordered g-0">
-            <div class="col-12">
-                <div class="card-header d-flex align-items-center justify-content-between">
-                    <div class="card-title mb-0">
-                        <h5 class="m-0 me-2">Kategori yang paling disukai</h5>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn p-0" type="button" id="totalRevenue" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="bx bx-dots-vertical-rounded bx-sm text-muted"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalRevenue">
-                        <a class="dropdown-item" href="javascript:void(0);">Select All</a>
-                        <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-                        <a class="dropdown-item" href="javascript:void(0);">Share</a>
-                        </div>
-                    </div>
-                </div>
-                <canvas id="myHorizontalBarChart" class="px-3" width="160" height="40"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="col-xl-4 col-md-6">
-    <div class="card mb-5" style="background-color: #003161">
-        <div class="d-flex align-items-center">
-            <div class="row">
-                <div class="col-4">
-                    <div class="card-body ">
-                        <img src="https://img.freepik.com/fotos-premium/woman-smiling-wear-formal-uniform_519183-2075.jpg" width="91" height="91" class="rounded border-secondary border" alt="View Sales">
-                    </div>
-                </div>
-                <div class="col-8">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mt-1">
-                            <h5 class="card-title text-white mb-0"><strong>Betrand Russel</strong></h5>
-                        </div>
-                        <div class="d-flex align-items-center mt-1">
-                            <h6 class="card-title text-secondary mb-0"><strong>20201111129098</strong></h6>
-                        </div>
-                        <div class="d-flex align-items-center mt-1">
-                            <h6 class="card-title  text-secondary mb-0"><strong>Sales - II C</strong></h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <div class="card mb-5 card-rounded">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-lg-12" >
-                <div class="calendar">
-                    <div class="header-calender">
-                        <button id="prev-week" class="nav-btn">←</button>
-                        <div id="current-month" class="month-display"></div>
-                        <button id="next-week" class="nav-btn">→</button>
-                    </div>
-                    
-                    <div class="weekdays">
-                        <span>S</span>
-                        <span>M</span>
-                        <span>T</span>
-                        <span>W</span>
-                        <span>T</span>
-                        <span>F</span>
-                        <span>S</span>
-                    </div>
-                    <div id="days" class="days"></div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <div class="card">
-        <h5 class="card-header">Aktivitas Terbaru</h5>
-        <div class="card-body" style="height: 550px;">
-            <ul class="timeline mb-0">
-                                    <li class="timeline-item timeline-item-transparent">
-                        <span class="timeline-point timeline-point-success"></span>
-                        <div class="timeline-event">
-                            <div class="timeline-header mb-3">
-                                <h6 class="mb-0">Pembelian</h6>
-                                <small class="text-muted">1 hari yang lalu</small>
-                            </div>
-                            <p class="mb-2">
-                                Membeli kelas: The Complete Financial Analyst Course 2024
-                            </p>
-                        </div>
-                    </li>
-                                    <li class="timeline-item timeline-item-transparent">
-                        <span class="timeline-point timeline-point-success"></span>
-                        <div class="timeline-event">
-                            <div class="timeline-header mb-3">
-                                <h6 class="mb-0">Login</h6>
-                                <small class="text-muted">1 hari yang lalu</small>
-                            </div>
-                            <p class="mb-2">
-                                Masuk ke aplikasi pembelajaran
-                            </p>
-                        </div>
-                    </li>
-                                    <li class="timeline-item timeline-item-transparent">
-                        <span class="timeline-point timeline-point-success"></span>
-                        <div class="timeline-event">
-                            <div class="timeline-header mb-3">
-                                <h6 class="mb-0">Login</h6>
-                                <small class="text-muted">1 hari yang lalu</small>
-                            </div>
-                            <p class="mb-2">
-                                Masuk ke aplikasi pembelajaran
-                            </p>
-                        </div>
-                    </li>
-                                    <li class="timeline-item timeline-item-transparent">
-                        <span class="timeline-point timeline-point-success"></span>
-                        <div class="timeline-event">
-                            <div class="timeline-header mb-3">
-                                <h6 class="mb-0">Logout</h6>
-                                <small class="text-muted">1 hari yang lalu</small>
-                            </div>
-                            <p class="mb-2">
-                                Pengguna keluar dari sistem
-                            </p>
-                        </div>
-                    </li>
-                                    <li class="timeline-item timeline-item-transparent">
-                        <span class="timeline-point timeline-point-success"></span>
-                        <div class="timeline-event">
-                            <div class="timeline-header mb-3">
-                                <h6 class="mb-0">Logout</h6>
-                                <small class="text-muted">5 hari yang lalu</small>
-                            </div>
-                            <p class="mb-2">
-                                Pengguna keluar dari sistem
-                            </p>
-                        </div>
-                    </li>
-                            </ul>
-        </div>
-        <div class="card-footer position-relative">
-            <button type="button" id="applyVoucherBtn" class="btn btn-label-warning w-100">Lihat Semua Aktivitas</button>
-            <div class="blur-overlay rounded"></div>
-        </div>
-    </div>
-</div>
-
-<div class="col-12">
-    <div class="card">
-        <div class="row row-bordered g-0">                   
-            <div class="col-lg-4 align-items-bottom">
-                <div class="card-header d-flex align-items-center mb-0 justify-content-between">
-                    <div class="card-title mb-0">
-                        <h5 class="m-0 me-2">Skor Anda</h5>
-                    </div>
-                    <div class="btn-group">
-                        <!-- Tombol utama yang menampilkan tahun -->
-                        <button type="button" class="btn btn-label-primary" id="selectedYear">
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script>
-                        </button>
-                        <!-- Tombol dropdown -->
-                        <button type="button" class="btn btn-label-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="visually-hidden">Toggle Dropdown</span>
-                        </button>
-                        <!-- Daftar dropdown tahun -->
-                        <ul class="dropdown-menu" id="yearDropdown"></ul>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div id="scoreChart"></div>
-                    <div class="d-flex flex-column align-items-center">
-                        <p class="mb-0">Skor Anda dihitung dari 1 tahun terakhir</p>
-                        <h6>Peringkat <span class="text-danger fw-bold"><strong>#2</strong></span> dari 13 karyawan</h6>
-                    </div>
-                    <div class="resize-triggers">
-                        <div class="expand-trigger">
-                            <div style="width: 481px; height: 292px;"></div>
-                        </div>
-                        <div class="contract-trigger"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8">
+        
+        <div class="col-lg-4">
+            <div class="card h-100">
                 <div class="card-header d-flex justify-content-between">
-                    <div>
-                        <h5 class="card-title mb-1">Riwayat Pengeluaran</h5>
-                        <p class="card-subtitle">Ringkasan laporan tahunan</p>
+                    <div class="card-title mb-0">
+                        <h6 class="mb-0">Aktivitas Terbaru</h6>
                     </div>
-                    <form class="d-flex">
-                        <input type="text" id="dateRangePickerKaryawan" class="form-control me-2" placeholder="Atur rentang tanggal" style="height: 40px;">
-                        <button type="submit" class="btn btn-primary btn-sm"  style="height: 40px;">Terapkan</button>
-                    </form>
+                    <div class="dropdown">
+                        <button class="btn text-muted p-0" type="button" id="ordersCountries" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bx bx-dots-vertical-rounded bx-sm"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ordersCountries">
+                            <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+                            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body" style="position: relative;">
-                    <div id="chart"></div>
+                <div class="card-body p-0">
+                    <div class="nav-align-top">
+                        <ul class="nav nav-tabs nav-fill rounded-0 timeline-indicator-advanced" role="tablist">
+                            <li class="nav-item">
+                                <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-karyawan" aria-controls="navs-justified-karyawan" aria-selected="false">Karyawan</button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-admin" aria-controls="navs-justified-admin" aria-selected="true">Admin</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content border-0 mx-1">
+                            <!-- Aktivitas Karyawan -->
+                            <div class="tab-pane fade show active" id="navs-justified-karyawan" role="tabpanel" style="height: 320px; overflow-y: auto; overflow-x: hidden;">
+                                <ul class="timeline mb-0">
+                                                                            <li class="timeline-item ps-6 border-left-dashed">
+                                            <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
+                                                <i class='bx bx-check-circle'></i>
+                                            </span>
+                                            <div class="timeline-event ps-1">
+                                                <div class="timeline-header">
+                                                    <small class="text-success"><strong>Keanu Reaves</strong></small>
+                                                </div>
+                                                <h6 class="my-50">Masuk ke aplikasi pembelajaran</h6>
+                                                <p class="text-body mb-0">
+                                                    Selasa, 19 Nov 2024 - 14.43
+                                                </p>
+                                            </div>
+                                        </li>
+                                                                            <li class="timeline-item ps-6 border-left-dashed">
+                                            <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
+                                                <i class='bx bx-check-circle'></i>
+                                            </span>
+                                            <div class="timeline-event ps-1">
+                                                <div class="timeline-header">
+                                                    <small class="text-success"><strong>Keanu Reaves</strong></small>
+                                                </div>
+                                                <h6 class="my-50">Masuk ke aplikasi pembelajaran</h6>
+                                                <p class="text-body mb-0">
+                                                    Senin, 18 Nov 2024 - 07.09
+                                                </p>
+                                            </div>
+                                        </li>
+                                                                            <li class="timeline-item ps-6 border-left-dashed">
+                                            <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
+                                                <i class='bx bx-check-circle'></i>
+                                            </span>
+                                            <div class="timeline-event ps-1">
+                                                <div class="timeline-header">
+                                                    <small class="text-success"><strong>Keanu Reaves</strong></small>
+                                                </div>
+                                                <h6 class="my-50">Masuk ke aplikasi pembelajaran</h6>
+                                                <p class="text-body mb-0">
+                                                    Senin, 18 Nov 2024 - 07.07
+                                                </p>
+                                            </div>
+                                        </li>
+                                                                            <li class="timeline-item ps-6 border-left-dashed">
+                                            <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
+                                                <i class='bx bx-check-circle'></i>
+                                            </span>
+                                            <div class="timeline-event ps-1">
+                                                <div class="timeline-header">
+                                                    <small class="text-success"><strong>Keanu Reaves</strong></small>
+                                                </div>
+                                                <h6 class="my-50">Masuk ke aplikasi pembelajaran</h6>
+                                                <p class="text-body mb-0">
+                                                    Senin, 18 Nov 2024 - 07.07
+                                                </p>
+                                            </div>
+                                        </li>
+                                                                            <li class="timeline-item ps-6 border-left-dashed">
+                                            <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
+                                                <i class='bx bx-check-circle'></i>
+                                            </span>
+                                            <div class="timeline-event ps-1">
+                                                <div class="timeline-header">
+                                                    <small class="text-success"><strong>Keanu Reaves</strong></small>
+                                                </div>
+                                                <h6 class="my-50">Masuk ke aplikasi pembelajaran</h6>
+                                                <p class="text-body mb-0">
+                                                    Senin, 18 Nov 2024 - 06.56
+                                                </p>
+                                            </div>
+                                        </li>
+                                                                            <li class="timeline-item ps-6 border-left-dashed">
+                                            <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
+                                                <i class='bx bx-check-circle'></i>
+                                            </span>
+                                            <div class="timeline-event ps-1">
+                                                <div class="timeline-header">
+                                                    <small class="text-success"><strong>Keanu Reaves</strong></small>
+                                                </div>
+                                                <h6 class="my-50">Masuk ke aplikasi pembelajaran</h6>
+                                                <p class="text-body mb-0">
+                                                    Senin, 18 Nov 2024 - 06.55
+                                                </p>
+                                            </div>
+                                        </li>
+                                                                            <li class="timeline-item ps-6 border-left-dashed">
+                                            <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
+                                                <i class='bx bx-check-circle'></i>
+                                            </span>
+                                            <div class="timeline-event ps-1">
+                                                <div class="timeline-header">
+                                                    <small class="text-success"><strong>Farizan zan</strong></small>
+                                                </div>
+                                                <h6 class="my-50">Masuk ke aplikasi pembelajaran</h6>
+                                                <p class="text-body mb-0">
+                                                    Senin, 18 Nov 2024 - 06.55
+                                                </p>
+                                            </div>
+                                        </li>
+                                                                            <li class="timeline-item ps-6 border-left-dashed">
+                                            <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
+                                                <i class='bx bx-check-circle'></i>
+                                            </span>
+                                            <div class="timeline-event ps-1">
+                                                <div class="timeline-header">
+                                                    <small class="text-success"><strong>Keanu Reaves</strong></small>
+                                                </div>
+                                                <h6 class="my-50">Masuk ke aplikasi pembelajaran</h6>
+                                                <p class="text-body mb-0">
+                                                    Senin, 18 Nov 2024 - 06.54
+                                                </p>
+                                            </div>
+                                        </li>
+                                                                            <li class="timeline-item ps-6 border-left-dashed">
+                                            <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
+                                                <i class='bx bx-check-circle'></i>
+                                            </span>
+                                            <div class="timeline-event ps-1">
+                                                <div class="timeline-header">
+                                                    <small class="text-success"><strong>Keanu Reaves</strong></small>
+                                                </div>
+                                                <h6 class="my-50">Masuk ke aplikasi pembelajaran</h6>
+                                                <p class="text-body mb-0">
+                                                    Senin, 18 Nov 2024 - 06.54
+                                                </p>
+                                            </div>
+                                        </li>
+                                                                            <li class="timeline-item ps-6 border-left-dashed">
+                                            <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
+                                                <i class='bx bx-check-circle'></i>
+                                            </span>
+                                            <div class="timeline-event ps-1">
+                                                <div class="timeline-header">
+                                                    <small class="text-success"><strong>Farizan zan</strong></small>
+                                                </div>
+                                                <h6 class="my-50">Masuk ke aplikasi pembelajaran</h6>
+                                                <p class="text-body mb-0">
+                                                    Senin, 18 Nov 2024 - 06.51
+                                                </p>
+                                            </div>
+                                        </li>
+                                                                    </ul>
+                            </div>
+
+                            <!-- Aktivitas Admin -->
+                            <div class="tab-pane fade" id="navs-justified-admin" role="tabpanel">
+                                <ul class="timeline mb-0">
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    
+    <div class="col-lg-12 mb-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="card-title mb-4">
+                        <h6 class="m-0 me-2">Perbandingan Transaksi Tiap Departemen</h6>
+                        <p class="card-subtitle">Ringkasan Semua Departemen</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <select id="dateRangeSelectTransaksi" class="form-select me-2" style="width: 140px;">
+                            <option value="week">Bulan ini</option>
+                            <option value="year">Tahun ini</option>
+                            <option value="custom">Custom</option>
+                        </select>
+                        <input type="text" id="dateRangePickerTransaksi" class="form-control me-2" placeholder="Atur rentang tanggal" style="display:none; width: 200px;">
+                        <button id="applyFilterTransaksi" class="btn btn-primary btn-sm">Terapkan</button>
+                    </div>
+                </div>
+                <!-- Tambahkan wrapper dengan tinggi tetap -->
+                <div style="position: relative; height: 280px; width: 100%;">
+                    <canvas class="p-3" id="weeklyReportChart"></canvas>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="col-12" id="detailprogress">
-    <div class="card mb-6">
-        <div class="table-responsive mb-4">
-            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
-                <div class="card-header py-4 d-flex justify-content-between">
-                    <div class="head-label text-start">
-                        <h5 class="card-title mb-0 text-nowrap">Riwayat Kelas Anda</h5>
+    
+    <div class="col-12 mb-6">
+        <div class="card">
+            <div class="row row-bordered g-0">                   
+                <div class="col-lg-4 border border-end d-flex flex-column">
+                    <div class="card-header d-flex justify-content-between">
+                        <div>
+                            <h6 class="card-title mb-1">Jumlah Kelas Tiap Kategori</h5>
+                            <p class="card-subtitle">Laporan Semua Kategori</p>
+                        </div>
                     </div>
-                    <div class="d-flex">
-                        <div class="dropdown me-5">
+                    <div class="card-body p-0 m-0">
+                        <canvas id="myDoughnutChart" style="width: 200px; height: 200px;"></canvas>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8">
+                    <div class="card-header d-flex justify-content-between">
+                        <div>
+                            <h6 class="card-title mb-1">Aktivitas Pengguna</h5>
+                            <p class="card-subtitle">Laporan Semua Karywan</p>
+                        </div>
+                        <div class="dropdown">
                             <select id="select2Basic" class="select2 form-select form-select-lg form-select-sm" data-allow-clear="true">
-                                <option value="" selected>Terbaru</option>
-                                <option value="">Terlama</option>
+                                <option value="2024" selected>2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
                             </select>
                         </div>
-                        <div id="DataTables_Table_0_filter" class="dataTables_filter"><label><input type="search"
-                            class="form-control" placeholder="Cari Kelas" aria-controls="DataTables_Table_0"></label>
-                        </div>
+                    </div>
+                    <div class="card-body" style="position: relative;">
+                        <div class="p-3" id="contributionChart"></div>
                     </div>
                 </div>
-
-                <table class="table table-sm datatables-academy-course dataTable no-footer dtr-column"
-                    id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
-                    <thead class="border-top">
-                        <tr>
-                            <th>   
-                            </th>
-                            <th >Nama Kelas</th>
-                            <th >Tanggal Mulai</th>
-                            <th >Sisa Waktu</th>
-                            <th >Progress</th>
-                            <th ></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                                                                        <tr>
-                            <td class="dt-checkboxes-cell">
-                                1
-                            </td>
-                            <td class="sorting_1">
-                                <div class="d-flex align-items-center">
-                                    <span class="me-4">
-                                        <span class="badge bg-label-warning rounded p-1_5">
-                                            <img src="image/kelas-sampul/1727794125.jpg" alt="" width="60px" class="rounded">
-                                        </span>
-                                    </span>
-                                    <div>
-                                        <a class="text-heading text-truncate fw-medium mb-2">
-                                            The Complete Financial Analyst Course 2024
-                                                                                    </a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="fw-medium text-nowrap text-heading">
-                                    18 November 24
-                                </span>
-                            </td>                                       
-                            
-                            <td class="">
-                                <span class="fw-medium text-nowrap rounded p-1 bg-label-primary">
-                                    12 Hari Lagi
-                                </span>
-                            </td>
-                                                                                                                                    
-                            <td>
-                                <div class="d-flex align-items-center gap-3 text-warning">
-                                    <p class="fw-medium mb-0 text-heading">19%</p>
-                                    <div class="progress w-19" style="height: 6px;">
-                                        <div class="progress-bar bg-warning" style="width: 19%" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100">
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </td>                                    
-                            <td>
-                                                                    <a href="" class="btn btn-label-primary ms-auto" role="button">Belajar Sekarang</a>    
-                                                            </td>
-                        </tr>
-                    
-                    </tbody>
-                </table>
-                <div class="row mx-md-4 mt-3 flex-column flex-md-row align-items-center">
-                    <div class="col-sm-6 col-12 text-center text-md-start pb-2 pb-xl-0 px-0">
-                        <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1
-                            to 5 of 25 entries</div>
-                    </div>
-                    <div class="col-sm-6 col-12 d-flex justify-content-center justify-content-md-end px-0">
-                        <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
-                            <ul class="pagination">
-                                <li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a
-                                        aria-controls="DataTables_Table_0" aria-disabled="true" role="link"
-                                        data-dt-idx="previous" tabindex="-1" class="page-link"><i
-                                            class="bx bx-chevron-left bx-18px"></i></a></li>
-                                <li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0"
-                                        role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a>
-                                </li>
-                                <li class="paginate_button page-item next" id="DataTables_Table_0_next"><a href="#"
-                                        aria-controls="DataTables_Table_0" role="link" data-dt-idx="next" tabindex="0"
-                                        class="page-link"><i class="bx bx-chevron-right bx-18px"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div style="width: 1%;"></div>
             </div>
         </div>
     </div>
-</div>
-    </div>
-</div>
 
-<!-- Modal -->
-<div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalCenterTitle">Detail</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    
+    <div class="col-12 order-3 order-lg-4 mb-6">
+        <div class="card text-center h-100">
+            <div class="card-header nav-align-top pb-1">
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="nav-item">
+                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-os" aria-controls="navs-pills-os" aria-selected="false">Kelas Terpopuler</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-browser" aria-controls="navs-pills-browser" aria-selected="true">Kelas Kurang Diminati</button>
+                    </li>
+                </ul>
             </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="card border border-success">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <div class="card-info">
-                                        <p class="text-heading mb-1">Total Transaksi Pembelian</p>
-                                        <div class="d-flex align-items-center mb-1">
-                                            <h4 class="card-title mb-0 me-2">IDR 399.000</h4>
-                                            
-                                        </div>
-                                        <span>Total Keseluruhan</span>
-                                    </div>
-                                    <div class="card-icon">
-                                        <span class="badge bg-label-success rounded p-2">
-                                            <i class='bx bx-trending-up bx-sm'></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="tab-content pt-0 pb-4">
+                <hr>
+                
+                <div class="tab-pane fade  show active" id="navs-pills-os" role="tabpanel">
+                    <div class="table-responsive text-start text-nowrap">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th class="w-50">Nama Kelas</th>
+                                    <th>Kategori</th>
+                                    <th>Pendaftar</th>
+                                    <th>Rating</th>
+                                    <th>Dipublish pada:</th>
+                                    <th>Total Coin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="http://127.0.0.1:8000/image/kelas-sampul/1727794125.jpg" alt="The Complete Financial Analyst Course 2024" height="24" width="42" class="me-3 border-secondary border rounded">
+                                                <span class="text-heading">The Complete Financial Analyst Course 2024</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading">Produksi</td>
+                                        <td class="text-heading">4 <span class="text-secondary">Karyawan</span></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                                
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star-half'></i></span>
+                                                                
+                                                                
+                                                <small class="fw-medium">(4.7)</small>
+                                            </div>
+                                        </td>
+                                        <td>01/10/2024</td>
+                                        <td>IDR 1.596.000,00</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="http://127.0.0.1:8000/image/kelas-sampul/1730442956.webp" alt="Onboarding" height="24" width="42" class="me-3 border-secondary border rounded">
+                                                <span class="text-heading">Onboarding</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading">Onboarding</td>
+                                        <td class="text-heading">2 <span class="text-secondary">Karyawan</span></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                                
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                
+                                                                
+                                                                
+                                                <small class="fw-medium">(5.0)</small>
+                                            </div>
+                                        </td>
+                                        <td>01/11/2024</td>
+                                        <td>IDR 1.198.000,00</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="http://127.0.0.1:8000/image/kelas-sampul/1727678387.jpg" alt="Testing React App Untuk Pemula" height="24" width="42" class="me-3 border-secondary border rounded">
+                                                <span class="text-heading">Testing React App Untuk Pemula</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading">Business Development</td>
+                                        <td class="text-heading">1 <span class="text-secondary">Karyawan</span></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                                
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                                                    <span class="text-warning me-1"><i class='bx bxs-star'></i></span>
+                                                                
+                                                                
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                
+                                                <small class="fw-medium">(4.0)</small>
+                                            </div>
+                                        </td>
+                                        <td>30/09/2024</td>
+                                        <td>IDR 399.000,00</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="http://127.0.0.1:8000/image/kelas-sampul/maxresdefault.jpg" alt="React Js Bahasa Indonesia (Next.Js + Spotify Rapid API)" height="24" width="42" class="me-3 border-secondary border rounded">
+                                                <span class="text-heading">React Js Bahasa Indonesia (Next.Js + Spotify Rapid API)</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading">Business Development</td>
+                                        <td class="text-heading">0 <span class="text-secondary">Karyawan</span></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                                
+                                                                
+                                                                
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                
+                                                <small class="fw-medium">(0.0)</small>
+                                            </div>
+                                        </td>
+                                        <td>30/09/2024</td>
+                                        <td>IDR 0,00</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="http://127.0.0.1:8000/image/kelas-sampul/1727678557.jpg" alt="REST APIs with Flask and Python in 2024" height="24" width="42" class="me-3 border-secondary border rounded">
+                                                <span class="text-heading">REST APIs with Flask and Python in 2024</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading">Finance</td>
+                                        <td class="text-heading">0 <span class="text-secondary">Karyawan</span></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                                
+                                                                
+                                                                
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                
+                                                <small class="fw-medium">(0.0)</small>
+                                            </div>
+                                        </td>
+                                        <td>30/09/2024</td>
+                                        <td>IDR 0,00</td>
+                                    </tr>
+                                                            </tbody>
+                        </table>
                     </div>
-                    <div class="col-lg-6 mb-6">
-                        <div class="card border border-danger">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <div class="card-info">
-                                        <p class="text-heading mb-1">Total koin tidak digunakan</p>
-                                        <div class="d-flex align-items-center mb-1">
-                                            <h4 class="card-title mb-0 me-2">IDR 1.250.000</h4>
-                                        </div>
-                                        <span>Total Keseluruhan</span>
-                                    </div>
-                                    <div class="card-icon">
-                                        <span class="badge bg-label-danger rounded p-2">
-                                            <i class='bx bx-pie-chart-alt bx-sm'></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div> 
+
+                
+                <div class="tab-pane fade" id="navs-pills-browser" role="tabpanel">
+                    <div class="table-responsive text-start text-nowrap">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th class="w-50">Nama Kelas</th>
+                                    <th>Kategori</th>
+                                    <th>Dipublish pada:</th>
+                                    <th>Pendaftar</th>
+                                    <th>Rating</th>
+                                    <th>Total Transaksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="http://127.0.0.1:8000/image/kelas-sampul/maxresdefault.jpg" alt="React Js Bahasa Indonesia (Next.Js + Spotify Rapid API)" height="24" width="42" class="me-3 border-secondary border rounded">
+                                                <span class="text-heading">React Js Bahasa Indonesia (Next.Js + Spotify Rapid API)</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading">Business Development</td>
+                                        <td>30/09/2024</td>
+                                        <td class="text-heading">0</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                                
+                                                                
+                                                                
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                
+                                                <small class="fw-medium">(0.0)</small>
+                                            </div>
+                                        </td>
+                                        <td>IDR 0,00</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="http://127.0.0.1:8000/image/kelas-sampul/1727678557.jpg" alt="REST APIs with Flask and Python in 2024" height="24" width="42" class="me-3 border-secondary border rounded">
+                                                <span class="text-heading">REST APIs with Flask and Python in 2024</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading">Finance</td>
+                                        <td>30/09/2024</td>
+                                        <td class="text-heading">0</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                                
+                                                                
+                                                                
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                
+                                                <small class="fw-medium">(0.0)</small>
+                                            </div>
+                                        </td>
+                                        <td>IDR 0,00</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="http://127.0.0.1:8000/image/kelas-sampul/1727678943.jpg" alt="CompTIA Security+ (SY0-701) Complete Course &amp; Exam" height="24" width="42" class="me-3 border-secondary border rounded">
+                                                <span class="text-heading">CompTIA Security+ (SY0-701) Complete Course &amp; Exam</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading">IT
+</td>
+                                        <td>30/09/2024</td>
+                                        <td class="text-heading">0</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                                
+                                                                
+                                                                
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                
+                                                <small class="fw-medium">(0.0)</small>
+                                            </div>
+                                        </td>
+                                        <td>IDR 0,00</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="http://127.0.0.1:8000/image/kelas-sampul/1727679124.jpg" alt="Digital Disruption Masterclass PLUS Agile &amp; Hackathons" height="24" width="42" class="me-3 border-secondary border rounded">
+                                                <span class="text-heading">Digital Disruption Masterclass PLUS Agile &amp; Hackathons</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading">IT
+</td>
+                                        <td>30/09/2024</td>
+                                        <td class="text-heading">0</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                                
+                                                                
+                                                                
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                
+                                                <small class="fw-medium">(0.0)</small>
+                                            </div>
+                                        </td>
+                                        <td>IDR 0,00</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="http://127.0.0.1:8000/image/kelas-sampul/1727679522.jpeg" alt="Learn Bug Bounty Hunting &amp; Web Security Testing From Scratch" height="24" width="42" class="me-3 border-secondary border rounded">
+                                                <span class="text-heading">Learn Bug Bounty Hunting &amp; Web Security Testing From Scratch</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading">IT
+</td>
+                                        <td>30/09/2024</td>
+                                        <td class="text-heading">0</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                                
+                                                                
+                                                                
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                                                    <span class="text-muted me-1"><i class='bx bx-star'></i></span>
+                                                                
+                                                <small class="fw-medium">(0.0)</small>
+                                            </div>
+                                        </td>
+                                        <td>IDR 0,00</td>
+                                    </tr>
+                                                            </tbody>
+                        </table>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="card border shadow border-primary">
-                            <div class="card-header d-flex justify-content-between">
-                                <div>
-                                    <h5 class="card-title mb-1">Riwayat Koin Tidak Terpakai</h5>
-                                </div>
-                                <div class="dropdown">
-                                    <select id="select2Basic" class="select2 form-select form-select-lg form-select-sm" data-allow-clear="true">
-                                        <option value="2024" selected>2024</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2021">2021</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="card-body" style="position: relative;">
-                                <div id="chartKoinTerbuang"></div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-12 order-3 order-lg-4 mb-6">
+        <div class="card h-100">
+            <div class="card-header pb-1">
+                <div class="card-title mb-4">
+                    <h5 class="m-0 me-2">Statisktik Perolehan Bintang Karyawan</h5>
+                    <p class="card-subtitle">Laporan 3 Bulan</p>
+                </div>
+            </div>
+            <div class="tab-content pt-0 pb-4">
+                <div class="tab-pane fade  show active" id="navs-pills-os" role="tabpanel">
+                    <div class="table-responsive text-start text-nowrap">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama Karyawan</th>
+                                    <th>Departemen</th>
+                                    <th>Skor Diperoleh:</th>
+                                    <th>Video:
+                                        <button type="button" class="btn btn-white btn-sm px-1 mb-1" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="<span>Ini adalah total waktu yang dihabiskan untuk menonton video pembelajaran</span>">
+                                            <i class='bx bxs-help-circle text-info' ></i>
+                                        </button>
+                                    </th>
+                                    <th>Soal:
+                                        <button type="button" class="btn btn-white btn-sm px-1 mb-1" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="<span>Ini adalah total waktu yang dihabiskan untuk mengerjakan soal</span>">
+                                            <i class='bx bxs-help-circle text-success' ></i>
+                                        </button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                    <tr>
+                                        <td class="fw-bold">#1</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-heading fw-bold">
+                                                    Farizan zan
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading fw-bold">
+                                            HCD
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-warning p-1 rounded">
+                                                124
+                                            </span> ⭐
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-info p-1 rounded">
+                                                0 Jam
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-success p-1 rounded">
+                                                0 Jam
+                                            </span>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td class="fw-bold">#2</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-heading fw-bold">
+                                                    Farizan Ilham
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading fw-bold">
+                                            HCD
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-warning p-1 rounded">
+                                                74
+                                            </span> ⭐
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-info p-1 rounded">
+                                                0 Jam
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-success p-1 rounded">
+                                                0 Jam
+                                            </span>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td class="fw-bold">#3</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-heading fw-bold">
+                                                    Seteven Cury
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading fw-bold">
+                                            HCD
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-warning p-1 rounded">
+                                                66
+                                            </span> ⭐
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-info p-1 rounded">
+                                                0 Jam
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-success p-1 rounded">
+                                                0 Jam
+                                            </span>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td class="fw-bold">#4</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-heading fw-bold">
+                                                    Tidak Ada Nama
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading fw-bold">
+                                            Tidak Ada Departemen
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-warning p-1 rounded">
+                                                55
+                                            </span> ⭐
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-info p-1 rounded">
+                                                0 Jam
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-success p-1 rounded">
+                                                0 Jam
+                                            </span>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td class="fw-bold">#5</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-heading fw-bold">
+                                                    lemon
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="text-heading fw-bold">
+                                            Produksi
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-warning p-1 rounded">
+                                                53
+                                            </span> ⭐
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-info p-1 rounded">
+                                                0 Jam
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold bg-label-success p-1 rounded">
+                                                0 Jam
+                                            </span>
+                                        </td>
+                                    </tr>
+                                                            </tbody>                            
+                        </table>
                     </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for error alert -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Rentang Tanggal Tidak Valid</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body">
+                    Rentang tanggal yang dipilih melebihi batas maksimal 14 hari. Silakan pilih rentang tanggal yang lebih pendek.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                 </div>
             </div>
         </div>
@@ -1056,638 +1407,844 @@
     </div>
 
     <!-- Core JS -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Flatpickr JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    
+    
     <script>
-        // Initialize Flatpickr with max range of 14 days
-        flatpickr("#dateRangePickerKaryawan", {
-            mode: "range",
-            dateFormat: "Y-m-d",
-            theme: "material_blue", // Use modern theme
-            onChange: function(selectedDates, dateStr, instance) {
-                if (selectedDates.length === 2) {
-                    const diff = (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24);
-                    if (diff > 14) {
-                        // Show error modal
-                        const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
-                        errorModal.show();
-
-                        // Clear the selection
-                        instance.clear();
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateRangeSelect = document.getElementById('dateRangePicker');
+            const dateRangePicker = document.getElementById('dateRangePicker');
+    
+            // Inisialisasi Flatpickr
+            const fp = flatpickr("#dateRangePicker", {
+                mode: "range",
+                dateFormat: "Y-m-d",
+                theme: "material_blue",
+                onChange: function(selectedDates, dateStr, instance) {
+                    if (selectedDates.length === 2) {
+                        const diff = (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24);
+                        if (diff > 14) {
+                            // Tampilkan modal error
+                            const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                            errorModal.show();
+    
+                            // Hapus pilihan
+                            instance.clear();
+                        }
                     }
-                }
-            },
-        });
-    </script>
-
-    <script>
-        document.getElementById('select2Basic').addEventListener('change', function () {
-            const selectedEmployeeId = this.value;
-    
-            if (selectedEmployeeId) {
-                fetch(`/dashboard-data/${selectedEmployeeId}`, {
-                    method: 'GET',
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest'
-                    }
-                })
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('dashboard-content').innerHTML = html;
-                })
-                .catch(error => console.error('Error:', error));
-            }
-        });
-    </script>
-    
-    
-    <script>
-        // Data yang diambil dari controller
-        const videoData = ["21","40","33"];
-        const soalData = ["15","10","5"];
-    
-        // Fungsi untuk mendapatkan label hari berdasarkan tanggal real-time
-        function getDayLabels() {
-            const days = ['Rabu', 'Kamis', 'Jumat', 'Sabtu','Minggu', 'Senin', 'Selasa', ];
-            const today = new Date();
-            const week = [];
-    
-            // Mengambil label hari dimulai dari hari ini selama 7 hari ke belakang
-            for (let i = 6; i >= 0; i--) {
-                const day = new Date();
-                day.setDate(today.getDate() - i);
-                week.push(days[day.getDay()]);
-            }
-            return week;
-        }
-    
-        // Fungsi untuk memfilter data hanya pada hari yang ada aktivitasnya
-        function filterData(data) {
-            return data.map((value, index) => value > 0 ? value : null);
-        }
-    
-        const labels = getDayLabels();
-    
-        const data = {
-            labels: labels,
-            datasets: [
-                {
-                    label: 'Video',
-                    data: filterData(videoData),
-                    barThickness: 42,
-                    backgroundColor: 'rgba(255, 171, 0, 0.8)',
-                    borderWidth: 1,
-                    borderRadius: {
-                        topLeft: 0, topRight: 0, bottomLeft: 10, bottomRight: 10
-                    },
-                    order: 2,
-                    stack: 'combined'
                 },
-                {
-                    label: 'Soal',
-                    data: filterData(soalData),
-                    barThickness: 42,
-                    backgroundColor: 'rgba(255, 223, 160, 0.8)',
-                    borderWidth: 1,
-                    borderRadius: {
-                        topLeft: 10, topRight: 10, bottomLeft: 0, bottomRight: 0
-                    },
-                    order: 2,
-                    stack: 'combined'
-                }
-            ]
-        };
+            });
     
-        const config = {
-            type: 'bar',
-            data: data,
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            callback: function(value) {
-                                return value < 60 ? value + ' menit' : (value / 60).toFixed(1) + ' jam';
-                            }
+            // Event listener untuk dropdown rentang waktu
+            document.getElementById('dateRangeSelect').addEventListener('change', function() {
+                const selectedValue = this.value;
+                const today = new Date();
+                
+                switch(selectedValue) {
+                    case 'week':
+                        // Minggu ini (Senin - Minggu saat ini)
+                        const startOfWeek = new Date(today.setDate(today.getDate() - today.getDay() + 1));
+                        const endOfWeek = new Date(today.setDate(today.getDate() - today.getDay() + 7));
+                        fp.setDate([startOfWeek, endOfWeek]);
+                        dateRangePicker.style.display = 'none';
+                        break;
+                    
+                    case 'month':
+                        // Bulan ini
+                        const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+                        const endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+                        fp.setDate([startOfMonth, endOfMonth]);
+                        dateRangePicker.style.display = 'none';
+                        break;
+                    
+                    case 'year':
+                        // Tahun ini
+                        const startOfYear = new Date(today.getFullYear(), 0, 1);
+                        const endOfYear = new Date(today.getFullYear(), 11, 31);
+                        fp.setDate([startOfYear, endOfYear]);
+                        dateRangePicker.style.display = 'none';
+                        break;
+                    
+                    case 'custom':
+                        // Tampilkan date picker untuk custom
+                        dateRangePicker.style.display = 'block';
+                        fp.clear();
+                        break;
+                    
+                    default:
+                        dateRangePicker.style.display = 'none';
+                        fp.clear();
+                }
+            });
+        });
+    </script>
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateRangeSelectTransaksi = document.getElementById('dateRangePickerTransaksi');
+            const dateRangePickerTransaksi = document.getElementById('dateRangePickerTransaksi');
+    
+            // Inisialisasi Flatpickr
+            const fp = flatpickr("#dateRangePickerTransaksi", {
+                mode: "range",
+                dateFormat: "Y-m-d",
+                theme: "material_blue",
+                onChange: function(selectedDates, dateStr, instance) {
+                    if (selectedDates.length === 2) {
+                        const diff = (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24);
+                    }
+                },
+            });
+    
+            // Event listener untuk dropdown rentang waktu
+            document.getElementById('dateRangeSelectTransaksi').addEventListener('change', function() {
+                const selectedValue = this.value;
+                const today = new Date();
+                
+                switch(selectedValue) {
+                    case 'week':
+                        // Minggu ini (Senin - Minggu saat ini)
+                        const startOfWeek = new Date(today.setDate(today.getDate() - today.getDay() + 1));
+                        const endOfWeek = new Date(today.setDate(today.getDate() - today.getDay() + 7));
+                        fp.setDate([startOfWeek, endOfWeek]);
+                        dateRangePickerTransaksi.style.display = 'none';
+                        break;
+                    
+                    case 'month':
+                        // Bulan ini
+                        const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+                        const endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+                        fp.setDate([startOfMonth, endOfMonth]);
+                        dateRangePickerTransaksi.style.display = 'none';
+                        break;
+                    
+                    case 'year':
+                        // Tahun ini
+                        const startOfYear = new Date(today.getFullYear(), 0, 1);
+                        const endOfYear = new Date(today.getFullYear(), 11, 31);
+                        fp.setDate([startOfYear, endOfYear]);
+                        dateRangePickerTransaksi.style.display = 'none';
+                        break;
+                    
+                    case 'custom':
+                        // Tampilkan date picker untuk custom
+                        dateRangePickerTransaksi.style.display = 'block';
+                        fp.clear();
+                        break;
+                    
+                    default:
+                        dateRangePickerTransaksi.style.display = 'none';
+                        fp.clear();
+                }
+            });
+        });
+    </script>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data dummy yang dapat difilter
+            const dummyData = {
+                'week': {
+                    videoData: [10, 15, 22, 28, 20, 25, 12],
+                    soalData: [8, 25, 10, 11, 27, 22, 24],
+                    categories: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu']
+                },
+                'month': {
+                    videoData: [40, 55, 50, 25, 30, 60, 75, 20, 15, 75, 70, 90, 25, 85, 80, 70, 75, 65, 60, 50, 55, 45, 50, 55, 65, 75, 80, 70, 60, 50, 40],
+                    soalData: [50, 14, 30, 55, 65, 20, 30, 70, 55, 15, 20, 15, 60, 70, 75, 85, 90, 95, 85, 80, 75, 65, 60, 55, 50, 45, 40, 50, 55, 60, 50],
+                    categories: ['1 Oktober', '2 Oktober', '3 Oktober', '4 Oktober', '5 Oktober', '6 Oktober', '7 Oktober', '8 Oktober', '9 Oktober', '10 Oktober', '11 Oktober', '12 Oktober', '13 Oktober', '14 Oktober', '15 Oktober', '16 Oktober', '17 Oktober', '18 Oktober', '19 Oktober', '20 Oktober', '21 Oktober', '22 Oktober', '23 Oktober', '24 Oktober', '25 Oktober', '26 Oktober', '27 Oktober', '28 Oktober', '29 Oktober', '30 Oktober', '31 Oktober']
+                },
+                'year': {
+                    videoData: [150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260],
+                    soalData: [130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240],
+                    categories: [ 'Dec','Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov']
+                }
+            };
+        
+            let chart;
+        
+            function initializeChart(data) {
+                const options = {
+                    series: [
+                        {
+                            name: 'Video',
+                            data: data.videoData
                         },
-                        grid: {
-                            display: true,
-                            drawBorder: false
+                        {
+                            name: 'Soal',
+                            data: data.soalData
+                        }
+                    ],
+                    chart: {
+                        height: 350,
+                        type: 'area',
+                        toolbar: {
+                            show: false
                         }
                     },
-                    x: {
-                        grid: {
-                            display: false
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'top',
+                    colors: ['#696cff', '#ff9900'],
+                    dataLabels: { enabled: false },
+                    stroke: {
+                        curve: 'smooth',
+                        width: 2
+                    },
+                    fill: {
+                        type: ['gradient', 'solid'],
+                        gradient: {
+                            shadeIntensity: 0.1,
+                            opacityFrom: 0.8,
+                            opacityTo: 0.2,
+                            stops: [0, 90, 100]
+                        },
+                        opacity: [1, 0]  // Set opacity to 0 for the second series to remove shadow
+                    },
+                    stroke: {
+                        curve: 'smooth',
+                        width: 2.2,
+                        dashArray: [0, 5]
+                    },
+                    xaxis: {
+                        categories: data.categories,
                         labels: {
-                            usePointStyle: true,
-                            pointStyle: 'circle'
+                            rotate: 0, // Miringkan label
+                            // rotateAlways: true,
+                            maxHeight: 50, // Batasi ketinggian
+                            style: {
+                                fontSize: '10px' // Perkecil ukuran font
+                            },
+                            trim: true // Memotong label yang terlalu panjang
                         },
-                        onClick: null
+                       
+                    },
+                    // Tambahkan margin untuk mengakomodasi label yang miring
+                    grid: {
+                        padding: {
+                            bottom: 20 // Tambahkan padding bawah
+                        }
+                    },
+                    yaxis: {
+                        labels: {
+                            formatter: function(value) {
+                                return value.toFixed(0);
+                            }
+                        }
                     },
                     tooltip: {
-                        mode: 'nearest',
-                        intersect: true,
-                        callbacks: {
-                            label: function(tooltipItem) {
-                                let label = tooltipItem.dataset.label || '';
-                                if (label) {
-                                    label += ': ';
-                                }
-                                const value = tooltipItem.raw;
-                                label += value < 60 ? `${value} menit` : `${(value / 60).toFixed(1)} jam`;
-                                return label;
+                        y: {
+                            formatter: function(value) {
+                                return value.toFixed(0);
                             }
                         }
                     }
-                },
-                interaction: {
-                    mode: 'nearest',
-                    intersect: true
+                };
+        
+                if (chart) {
+                    chart.destroy();
                 }
+        
+                chart = new ApexCharts(document.querySelector("#SpentTimeChart"), options);
+                chart.render();
             }
-        };
-    
-        const ctx = document.getElementById('shipmentDeliveryChart').getContext('2d');
-        new Chart(ctx, config);
-    </script>    
-    
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const data = {
-            labels: ['Selesai', 'Proses', 'Expired'],
-            datasets: [{
-                data: [0,1,0],
-                backgroundColor: ['#4477CE', '#8CABFF', '#CBDCEB'],
-                hoverOffset: 20,
-                borderRadius: 10
-            }]
-          };
-      
-          const config = {
-            type: 'doughnut',
-            data: data,
-            options: {
-              responsive: true,
-              plugins: {
-                legend: {
-                  position: 'bottom',
-                  labels: {
-                    usePointStyle: true,  // Mengubah ikon legend menjadi lingkaran
-                    pointStyle: 'circle',
-                    padding: 20,
-                  },
-                },
-                tooltip: {
-                  enabled: true
-                },
-            },
-            layout: {
-                padding: {
-                    top: 20,
+            
+            function generateCustomData(startDate, endDate) {
+                const diffDays = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24));
+                
+                // Batasi jumlah titik data untuk menghindari overload
+                const MAX_POINTS = 30;
+                const interval = Math.max(1, Math.floor(diffDays / MAX_POINTS));
+
+                const videoData = [];
+                const soalData = [];
+                const categories = [];
+
+                for (let i = 0; i <= diffDays; i += interval) {
+                    const date = new Date(startDate);
+                    date.setDate(date.getDate() + i);
+                    
+                    videoData.push(Math.floor(Math.random() * 30));
+                    soalData.push(Math.floor(Math.random() * 25));
+                    
+                    // Format tanggal yang lebih ringkas
+                    categories.push(date.toLocaleDateString('id-ID', { 
+                        day: 'numeric', 
+                        month: 'short' 
+                    }));
                 }
-            },
-              onClick: function (event, elements) {
-                if (elements.length > 0) {
-                  const clickedElementIndex = elements[0].index;
-                  let dataset = this.data.datasets[0];
-                  if (!dataset._originalHoverOffset) {
-                    dataset._originalHoverOffset = dataset.hoverOffset;
-                  }
-                  dataset.hoverOffset = (dataset.hoverOffset === 20 && dataset.data[clickedElementIndex] === dataset._originalHoverOffset) ? 0 : 20;
-                  this.update();
-                }
-              }
+
+                return {
+                    videoData,
+                    soalData,
+                    categories
+                };
             }
-          };
-      
-          const myDoughnutChart = new Chart(
-            document.getElementById('myDoughnutChart'),
-            config
-          );
+
+            function generateLabelCategories(startDate, endDate) {
+                const diffDays = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24));
+                const categories = [];
+
+                if (diffDays <= 14) {
+                    // Jika <= 14 hari, pakai tanggal asli
+                    for (let i = 0; i <= diffDays; i++) {
+                        const date = new Date(startDate);
+                        date.setDate(date.getDate() + i);
+                        categories.push(date.toLocaleDateString('id-ID', { 
+                            day: 'numeric', 
+                            month: 'short' 
+                        }));
+                    }
+                } else if (diffDays <= 31 * 2) {
+                    // Jika > 14 hari dan <= 2 bulan, pakai minggu
+                    const weeks = Math.ceil(diffDays / 7);
+                    for (let i = 1; i <= weeks; i++) {
+                        categories.push(`Minggu ${i}`);
+                    }
+                } else if (diffDays <= 365) {
+                    // Jika > 2 bulan dan <= 1 tahun, pakai bulan
+                    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                    const startMonth = startDate.getMonth();
+                    const endMonth = endDate.getMonth();
+
+                    for (let i = startMonth; i <= endMonth; i++) {
+                        categories.push(months[i]);
+                    }
+                } else {
+                    // Jika > 1 tahun, pakai tahun
+                    categories.push(startDate.getFullYear().toString());
+                }
+
+                return categories;
+            }
+
+            function generateCustomData(startDate, endDate) {
+                const diffDays = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24));
+                const categories = generateLabelCategories(startDate, endDate);
+                
+                // Generate data sesuai jumlah kategori
+                const videoData = categories.map(() => Math.floor(Math.random() * 30));
+                const soalData = categories.map(() => Math.floor(Math.random() * 25));
+
+                return {
+                    videoData,
+                    soalData,
+                    categories
+                };
+            }
+        
+            // Inisialisasi Flatpickr untuk date range picker
+            const fp = flatpickr("#dateRangePicker", {
+                mode: "range",
+                dateFormat: "Y-m-d"
+            });
+        
+            // Fungsi untuk menghasilkan data custom
+            function generateCustomData(startDate, endDate) {
+                // Hitung perbedaan hari antara startDate dan endDate
+                const diffDays = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24));
+                
+                // Generate data dummy untuk rentang custom
+                const videoData = Array.from({length: diffDays + 1}, () => Math.floor(Math.random() * 30));
+                const soalData = Array.from({length: diffDays + 1}, () => Math.floor(Math.random() * 25));
+                
+                // Generate label tanggal
+                const categories = Array.from({length: diffDays + 1}, (_, i) => {
+                    const date = new Date(startDate);
+                    date.setDate(date.getDate() + i);
+                    return date.toLocaleDateString('id-ID', { day: '2-digit', month: 'short' });
+                });
+        
+                return {
+                    videoData,
+                    soalData,
+                    categories
+                };
+            }
+        
+            // Event listener untuk dropdown
+            document.getElementById('dateRangeSelect').addEventListener('change', function() {
+                const selectedValue = this.value;
+                const dateRangePicker = document.getElementById('dateRangePicker');
+        
+                switch(selectedValue) {
+                    case 'week':
+                    case 'month':
+                    case 'year':
+                        dateRangePicker.style.display = 'none';
+                        initializeChart(dummyData[selectedValue]);
+                        break;
+                    
+                    case 'custom':
+                        dateRangePicker.style.display = 'block';
+                        break;
+                }
+            });
+        
+            // Event listener untuk tombol Terapkan
+            document.getElementById('applyFilter').addEventListener('click', function() {
+                const selectedRange = document.getElementById('dateRangeSelect').value;
+        
+                if (selectedRange === 'custom') {
+                    const dates = fp.selectedDates;
+                    if (dates.length === 2) {
+                        // Generate data untuk rentang tanggal custom
+                        const customData = generateCustomData(dates[0], dates[1]);
+                        initializeChart(customData);
+                    } else {
+                        alert('Silakan pilih rentang tanggal terlebih dahulu');
+                    }
+                } else {
+                    // Gunakan data dummy sesuai pilihan
+                    initializeChart(dummyData[selectedRange]);
+                }
+            });
+        
+            // Inisialisasi chart pertama kali
+            initializeChart(dummyData['week']);
         });
     </script>
 
     
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Data kursus yang disukai (dalam persentase)
+        document.addEventListener("DOMContentLoaded", function () {
+            var bulan = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+            var dataTransaksi = [0,0,0,0,0,0,0,0,"599000","399000","2195000",0];
+
+            // Fungsi untuk memformat angka menjadi format Rupiah
+            const formatRupiah = (value) => {
+                return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(value).replace(/\u00A0/g, " ");
+            };
+
+            var options = {
+                series: [{
+                    name: 'Total Transaksi',
+                    data: dataTransaksi
+                }],
+                chart: {
+                    type: 'line',
+                    height: 310,
+                    toolbar: { show: false },
+                    dropShadow: {
+                        enabled: true,
+                        color: '#6365f1b3',
+                        top: 10,
+                        left: 0,
+                        blur: 5,
+                        opacity: 1,
+                        opacityTo: 0
+                    }
+                },
+                stroke: {
+                    curve: 'smooth',
+                    width: 3,
+                    colors: ['#6366F1']
+                },
+                fill: {
+                    type: 'gradient'
+                },
+                xaxis: {
+                    categories: bulan,
+                    labels: {
+                        style: {
+                            colors: '#9CA3AF'
+                        }
+                    }
+                },
+                yaxis: {
+                    labels: {
+                        formatter: (val) => `IDR ${val.toLocaleString('id-ID')}`,
+                        style: {
+                            colors: '#9CA3AF'
+                        }
+                    }
+                },
+                grid: {
+                    show: true,
+                    borderColor: '#E5E7EB',
+                    strokeDashArray: 7,
+                },
+                tooltip: {
+                    enabled: true,
+                    y: {
+                        formatter: (val) => formatRupiah(val) // Menggunakan fungsi formatRupiah
+                    }
+                },
+                markers: {
+                    size: 5,
+                    colors: ['#6366F1'],
+                    strokeColors: '#fff',
+                    strokeWidth: 2,
+                    hover: {
+                        size: 8
+                    }
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chartriwayattransaksi"), options);
+            chart.render();
+        });
+    </script>
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const ctx = document.getElementById('weeklyReportChart');
+            
+            // Data untuk grafik (tanggal 1 Nov - 20 Nov)
+            const labels = Array.from({ length: 20 }, (_, i) => `${i + 1} Nov`);
+            const thisMonthData = [40, 78, 82, 70, 72, 48, 75, 67, 54, 80, 72, 66, 85, 90, 78, 84, 70, 60, 50, 95];
+            const lastMonthData = [38, 76, 79, 68, 70, 46, 73, 64, 52, 78, 70, 63, 83, 88, 76, 82, 68, 58, 48, 93];
+    
+            // Hancurkan instance chart sebelumnya jika ada
+            if (window.weeklyChart instanceof Chart) {
+                window.weeklyChart.destroy();
+            }
+    
             const data = {
-                labels: ["Produksi"],
-                datasets: [{
-                    label: 'Persentase Kursus yang Disukai',
-                    data: [1], // Data dalam persentase
-                    backgroundColor: [
-                        '#ff6384', // Warna untuk masing-masing bar
-                        '#36a2eb',
-                        '#cc65fe',
-                        '#ffce56',
-                        '#4bc0c0'
-                    ],
-                    borderWidth: 1,
-                    borderRadius: 10, // Membuat bar rounded
-                    barThickness: 20, // Atur ketebalan bar
-                    maxBarThickness: 20, // Batasi ketebalan maksimum bar
-                }]
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Bulan Ini',
+                        data: thisMonthData,
+                        backgroundColor: 'rgb(102, 199, 50)',
+                        borderColor: '#696CFF',
+                        barThickness: 20,
+                        borderRadius: 4,
+                        maxBarThickness: 15
+                    },
+                    {
+                        label: 'Bulan Lalu',
+                        data: lastMonthData,
+                        backgroundColor: 'rgb(198, 241, 175)',
+                        borderColor: '#E7E7FF',
+                        barThickness: 20,
+                        borderRadius: 4,
+                        maxBarThickness: 15
+                    }
+                ]
             };
     
-            // Konfigurasi chart
+            // Konfigurasi grafik
             const config = {
                 type: 'bar',
                 data: data,
                 options: {
-                    indexAxis: 'y', // Membuat bar chart horizontal
-                    scales: {
-                        x: {
-                            beginAtZero: true, // Mulai dari 0 di sumbu X
-                            suggestedMax: Math.max(...data.datasets[0].data) + 10, // Sesuaikan sumbu X berdasarkan data
-                            grid: {
-                                display: true, // Tampilkan garis vertikal
-                                drawBorder: false, // Hilangkan garis batas
-                                color: 'rgba(0, 0, 0, 0.1)', // Garis vertikal lembut
-                                borderDash: [5, 5], // Gaya garis-garis
-                                lineWidth: 0.5 // Atur ketebalan garis vertikal agar lebih kecil
-                            }
-                        },
-                        y: {
-                            grid: {
-                                display: false, // Hilangkan garis horizontal
-                            }
-                        }
-                    },
                     responsive: true,
+                    maintainAspectRatio: false,
                     plugins: {
-                        tooltip: {
-                            enabled: true, // Aktifkan tooltips
-                        },
                         legend: {
-                            display: false // Sembunyikan legenda
+                            display: true,
+                        },
+                        tooltip: {
+                            backgroundColor: '#fff',
+                            titleColor: '#566a7f',
+                            bodyColor: '#566a7f',
+                            borderColor: '#d9dee3',
+                            borderWidth: 1,
+                            padding: 10,
+                            usePointStyle: true,
+                            displayColors: false,
+                            callbacks: {
+                                label: function (context) {
+                                    return `${context.dataset.label}: ${context.parsed.y}.000`;
+                                }
+                            }
                         }
                     },
-                    onLeave: function() {
-                        const chart = this;
-    
-                        // Kembalikan warna asli ketika tidak ada hover
-                        chart.data.datasets[0].backgroundColor = ['#ff6384', '#36a2eb', '#cc65fe', '#ffce56', '#4bc0c0'];
-                        chart.update();
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                stepSize: 20,
+                                callback: function (value) {
+                                    return value + '.000';
+                                },
+                                font: {
+                                    size: 11
+                                }
+                            },
+                            grid: {
+                                borderDash: [5, 5],
+                                drawBorder: false,
+                                color: '#ECEEF1'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: '#566a7f',
+                                font: {
+                                    size: 11
+                                },
+                            },
+                        }
                     },
-                    barPercentage: 0.8, // Kurangi sedikit lebar bar
-                    categoryPercentage: 0.6, // Kurangi jarak antar bar lebih agresif
+                    interaction: {
+                        intersect: false,
+                        mode: 'index',
+                    },
+                }
+            };
+    
+            // Inisialisasi grafik dan simpan instance-nya
+            window.weeklyChart = new Chart(ctx, config);
+    
+            // Tambahkan event listener untuk resize
+            window.addEventListener('resize', function () {
+                if (window.weeklyChart) {
+                    window.weeklyChart.resize();
+                }
+            });
+        });
+    </script>
+
+    
+    <script>
+        // Utility function to format date as YYYY-MM-DD
+        const formatDate = (date) => {
+            return date.toISOString().split('T')[0];
+            };
+
+            // Generate contribution data
+            const generateContributionData = () => {
+            const contributions = new Map();
+            
+            // Set start date to January 1, 2024
+            const startDate = new Date(2024, 0, 1);
+            // Set end date to November 20, 2024
+            const endDate = new Date(2024, 10, 20);
+            
+            // Initialize all dates with 0 contributions
+            let currentDate = new Date(startDate);
+            while (currentDate <= endDate) {
+                contributions.set(formatDate(currentDate), 0);
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+            
+            // Generate random contributions with some patterns
+            currentDate = new Date(startDate);
+            while (currentDate <= endDate) {
+                const dayOfWeek = currentDate.getDay();
+                const formattedDate = formatDate(currentDate);
+                
+                // More contributions on weekdays (Monday-Friday)
+                if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+                // Generate between 1-15 contributions
+                contributions.set(formattedDate, Math.floor(Math.random() * 15) + 1);
+                } else {
+                // Weekends: fewer contributions (0-5)
+                contributions.set(formattedDate, Math.floor(Math.random() * 6));
+                }
+                
+                // Simulate activity spikes every other week
+                if (Math.floor(currentDate.getDate() / 7) % 2 === 0) {
+                const existingValue = contributions.get(formattedDate);
+                contributions.set(formattedDate, existingValue + Math.floor(Math.random() * 10));
+                }
+                
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+            
+            return contributions;
+            };
+
+            // Function to get color based on contribution count
+            const getContributionColor = (count) => {
+            if (count === 0) return '#edf4ff';
+            if (count <= 5) return '#c9deff';
+            if (count <= 10) return '#85b6ff';
+            if (count <= 15) return '#4191ff';
+            return '#0066ff';
+            };
+
+            // Function to create the SVG grid
+            const createContributionGrid = () => {
+            const contributionData = generateContributionData();
+            const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            svg.setAttribute("viewBox", "0 0 800 140");
+            
+            // Add months
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            months.forEach((month, index) => {
+                const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                text.setAttribute("x", 30 + (index * 60));
+                text.setAttribute("y", 20);
+                text.setAttribute("font-size", "12");
+                text.setAttribute("fill", "#666");
+                text.textContent = month;
+                svg.appendChild(text);
+            });
+            
+            // Add days of week
+            const days = ['Mon', 'Wed', 'Fri'];
+            days.forEach((day, index) => {
+                const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                text.setAttribute("x", 1);
+                text.setAttribute("y", 40 + (index * 30));
+                text.setAttribute("font-size", "12");
+                text.setAttribute("fill", "#666");
+                text.textContent = day;
+                svg.appendChild(text);
+            });
+            
+            // Add contribution squares
+            let currentDate = new Date(2024, 0, 1);
+            let weekIndex = 0;
+            
+            while (currentDate <= new Date(2024, 10, 20)) {
+                const dayOfWeek = currentDate.getDay();
+                if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Skip weekends
+                const count = contributionData.get(formatDate(currentDate)) || 0;
+                const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                
+                rect.setAttribute("x", 30 + (weekIndex * 15));
+                rect.setAttribute("y", 30 + ((dayOfWeek - 1) * 15));
+                rect.setAttribute("width", "12");
+                rect.setAttribute("height", "12");
+                rect.setAttribute("rx", "2");
+                rect.setAttribute("fill", getContributionColor(count));
+                
+                // Add title for tooltip
+                const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+                title.textContent = `${count} contributions on ${formatDate(currentDate)}`;
+                rect.appendChild(title);
+                
+                svg.appendChild(rect);
+                }
+                
+                if (dayOfWeek === 6) weekIndex++;
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+            
+            // Add legend
+            const legendItems = [
+                { text: "Less", x: 620, color: "#edf4ff" },
+                { x: 660, color: "#c9deff" },
+                { x: 680, color: "#85b6ff" },
+                { x: 700, color: "#4191ff" },
+                { x: 720, color: "#0066ff" },
+                { text: "More", x: 760 }
+            ];
+            
+            legendItems.forEach(item => {
+                if (item.color) {
+                const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                rect.setAttribute("x", item.x);
+                rect.setAttribute("y", 122);
+                rect.setAttribute("width", "12");
+                rect.setAttribute("height", "12");
+                rect.setAttribute("rx", "2");
+                rect.setAttribute("fill", item.color);
+                svg.appendChild(rect);
+                }
+                if (item.text) {
+                const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                text.setAttribute("x", item.x);
+                text.setAttribute("y", 130);
+                text.setAttribute("font-size", "12");
+                text.setAttribute("fill", "#666");
+                text.textContent = item.text;
+                svg.appendChild(text);
+                }
+            });
+            
+            return svg;
+            };
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const chartContainer = document.getElementById('contributionChart');
+                const svg = createContributionGrid();
+                chartContainer.appendChild(svg);
+                
+                // Tambahkan event listener untuk select
+                document.getElementById('select2Basic').addEventListener('change', function(e) {
+                    const year = e.target.value;
+                    // Update chart berdasarkan tahun yang dipilih
+                    chartContainer.innerHTML = ''; // Bersihkan container
+                    const newSvg = createContributionGrid(); // Buat chart baru
+                    chartContainer.appendChild(newSvg);
+                });
+            });
+    </script>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const data = {
+                labels: ['Sales', 'HCD', 'Bussines', 'Finance', 'Marketing'],
+                datasets: [{
+                    data: (['32', '55', '15', '65', '22']),
+                    backgroundColor: ['#4477CE', '#8CABFF', '#CBDCEB'],
+                    hoverOffset: 20,
+                    borderRadius: 10
+                }]
+            };
+      
+            const config = {
+                type: 'doughnut',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                usePointStyle: true,
+                                pointStyle: 'circle',
+                                padding: 10,
+                            },
+                        },
+                        tooltip: {
+                            enabled: true,
+                        },
+                    },
                     layout: {
                         padding: {
-                            top: 0,
-                            bottom: 0
+                            top: 20,
+                        }
+                    },
+                    onClick: function (event, elements) {
+                        if (elements.length > 0) {
+                            const clickedElementIndex = elements[0].index;
+                            let dataset = this.data.datasets[0];
+                            if (!dataset._originalHoverOffset) {
+                                dataset._originalHoverOffset = dataset.hoverOffset;
+                            }
+                            dataset.hoverOffset = (dataset.hoverOffset === 20 && dataset.data[clickedElementIndex] === dataset._originalHoverOffset) ? 0 : 20;
+                            this.update();
                         }
                     }
                 }
             };
-    
-            // Inisialisasi chart dengan ID canvas 'myHorizontalBarChart'
-            const myHorizontalBarChart = new Chart(
-                document.getElementById('myHorizontalBarChart'),
+      
+            const myDoughnutChart = new Chart(
+                document.getElementById('myDoughnutChart'),
                 config
             );
         });
     </script>
-
-    
-    <script>
-        document.getElementById("detail").addEventListener("click", function(event) {
-            event.preventDefault();
-            document.querySelector("#detailprogress").scrollIntoView({ behavior: "smooth" });
-        });
-    </script>
-
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const options = {
-                chart: {
-                    height: 250,
-                    type: 'radialBar',
-                    animations: {
-                        enabled: true,
-                        easing: 'easeinout',
-                        speed: 800,
-                    },
-                    toolbar: {
-                        show: false
-                    },
-                },
-                series: [13.17], // Persentase dari controller
-                plotOptions: {
-                    radialBar: {
-                        hollow: {
-                            size: '60%'
-                        },
-                        dataLabels: {
-                            name: {
-                                offsetY: -10,
-                                color: '#646e78',
-                                fontSize: '15px',
-                                fontWeight: 500
-                            },
-                            value: {
-                                offsetY: 5,
-                                color: '#384551',
-                                fontSize: '24px',
-                                fontWeight: 500,
-                                show: true
-                            }
-                        },
-                        track: {
-                            strokeWidth: '18',
-                            background: '#e0e0e0',
-                            strokeDashArray: 5
-                        }
-                    }
-                },
-                labels: ['Memiliki 74 ⭐'] // Skor dari controller
-            };
-    
-            const chart = new ApexCharts(document.querySelector("#scoreChart"), options);
-            chart.render();
-        });
-    </script>
-
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var bulan = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-            var dataTransaksi = [0,0,0,0,0,0,0,0,0,0,"399000",0];
-
-            var options = {
-                series: [{
-                name: 'Total Transaksi',
-                data: dataTransaksi
-                // data: "["3000", "8000", "7000", "5000", "5000", "9000"]" // example data
-                }],
-                chart: {
-                    type: 'line',
-                    height: 310,
-                    toolbar: { show: false },
-                    dropShadow: {
-                        enabled: true,
-                        color: '#6365f1b3',
-                        top: 10,        // Menggeser shadow ke bawah
-                        left: 0,       // Tetap lurus vertikal
-                        blur: 5,      // Lebar blur shadow
-                        opacity: 1,  // Opacity awal shadow
-                        opacityTo: 0
-                    }
-                },
-                stroke: {
-                    curve: 'smooth',
-                    width: 3,
-                    colors: ['#6366F1']
-                },
-                fill: {
-                    type: 'gradient'
-                },
-                xaxis: {
-                    categories: bulan,
-                    // categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                    labels: {
-                        style: {
-                        colors: '#9CA3AF'
-                        }
-                    }
-                },
-                yaxis: {
-                    labels: {
-                        formatter: (val) => `${val / 1000}k`,
-                        style: {
-                        colors: '#9CA3AF'
-                        }
-                    }
-                },
-                grid: {
-                show: true,
-                borderColor: '#E5E7EB',
-                strokeDashArray: 7,
-                },
-                tooltip: {
-                enabled: true,
-                y: {
-                    formatter: (val) => `IDR ${val}`
-                }
-                },
-                markers: {
-                size: 5,
-                colors: ['#6366F1'],
-                strokeColors: '#fff',
-                strokeWidth: 2,
-                hover: {
-                    size: 8
-                }
-                }
-            };
-
-            var chart = new ApexCharts(document.querySelector("#chart"), options);
-            chart.render();
-            });
-
-    </script>
-
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var bulan = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-            var dataTransaksi = ["0","0","0","0","0","0","0","0","450000","800000","0","0"];
-
-            var options = {
-                series: [{
-                name: 'Total Transaksi',
-                data: dataTransaksi
-                // data: "["3000", "8000"]" // example data
-                }],
-                chart: {
-                    type: 'line',
-                    height: 310,
-                    toolbar: { show: false },
-                    dropShadow: {
-                        enabled: true,
-                        color: '#6365f1b3',
-                        top: 10,        // Menggeser shadow ke bawah
-                        left: 0,       // Tetap lurus vertikal
-                        blur: 5,      // Lebar blur shadow
-                        opacity: 1,  // Opacity awal shadow
-                        opacityTo: 0
-                    }
-                },
-                stroke: {
-                    curve: 'smooth',
-                    width: 3,
-                    colors: ['#6366F1']
-                },
-                fill: {
-                    type: 'gradient'
-                },
-                xaxis: {
-                    categories: bulan,
-                    // categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                    labels: {
-                        style: {
-                        colors: '#9CA3AF'
-                        }
-                    }
-                },
-                yaxis: {
-                    labels: {
-                        formatter: (val) => `${val / 1000}k`,
-                        style: {
-                        colors: '#9CA3AF'
-                        }
-                    }
-                },
-                grid: {
-                show: true,
-                borderColor: '#E5E7EB',
-                strokeDashArray: 7,
-                },
-                tooltip: {
-                enabled: true,
-                y: {
-                    formatter: (val) => `IDR ${val}`
-                }
-                },
-                markers: {
-                size: 5,
-                colors: ['#6366F1'],
-                strokeColors: '#fff',
-                strokeWidth: 2,
-                hover: {
-                    size: 8
-                }
-                }
-            };
-
-            var chart = new ApexCharts(document.querySelector("#chartKoinTerbuang"), options);
-            chart.render();
-            });
-    </script>
-
-    
-    <script>
-        // Mendapatkan elemen tombol utama yang menampilkan tahun
-        const selectedYearButton = document.getElementById('selectedYear');
-        // Mendapatkan tahun saat ini
-        const currentYear = new Date().getFullYear();
-        const yearDropdown = document.getElementById('yearDropdown');
-    
-        // Menambahkan beberapa tahun ke dropdown, mulai dari tahun ini hingga 4 tahun sebelumnya
-        for (let i = 0; i < 5; i++) {
-            const yearItem = document.createElement('li');
-            yearItem.innerHTML = `<a class="dropdown-item" href="javascript:void(0);">${currentYear - i}</a>`;
-            
-            // Menambahkan event listener untuk mengubah teks tahun pada tombol utama ketika dipilih
-            yearItem.addEventListener('click', function() {
-                selectedYearButton.innerText = this.innerText;
-            });
-    
-            yearDropdown.appendChild(yearItem);
-        }
-    </script>
-
-    
-    <script>
-        const daysElement = document.getElementById("days");
-        const monthDisplay = document.getElementById("current-month");
-        const prevWeekBtn = document.getElementById("prev-week");
-        const nextWeekBtn = document.getElementById("next-week");
-
-        let currentDate = new Date();
-        let startOfWeek = getStartOfWeek(currentDate);
-
-        function getStartOfWeek(date) {
-            const day = date.getDay();
-            const diff = date.getDate() - day; // Get the first day of the current week (Sunday)
-            return new Date(date.setDate(diff));
-        }
-
-        function updateCalendar() {
-            const year = startOfWeek.getFullYear();
-            const month = startOfWeek.getMonth();
-
-            // Set month display
-            const monthNames = [
-                "January", "February", "March", "April", "May", "June", 
-                "July", "August", "September", "October", "November", "December"
-            ];
-            monthDisplay.innerText = `${monthNames[month]} ${year}`;
-
-            // Generate 7 days starting from the current week
-            daysElement.innerHTML = "";  // Clear previous days
-
-            for (let i = 0; i < 7; i++) {
-                const dayDiv = document.createElement("div");
-                const date = new Date(startOfWeek);
-                date.setDate(startOfWeek.getDate() + i);
-
-                dayDiv.innerText = date.getDate();
-
-                // Highlight today's date
-                const today = new Date();
-                if (
-                    date.getDate() === today.getDate() &&
-                    date.getMonth() === today.getMonth() &&
-                    date.getFullYear() === today.getFullYear()
-                ) {
-                    dayDiv.classList.add("today");
-                }
-
-                // Select day on click
-                dayDiv.addEventListener("click", () => {
-                    const selectedDay = document.querySelector(".selected");
-                    if (selectedDay) {
-                        selectedDay.classList.remove("selected");
-                    }
-                    dayDiv.classList.add("selected");
-                });
-
-                daysElement.appendChild(dayDiv);
-            }
-        }
-
-        // Navigate to the previous week
-        prevWeekBtn.addEventListener("click", () => {
-            startOfWeek.setDate(startOfWeek.getDate() - 7);
-            updateCalendar();
-        });
-
-        // Navigate to the next week
-        nextWeekBtn.addEventListener("click", () => {
-            startOfWeek.setDate(startOfWeek.getDate() + 7);
-            updateCalendar();
-        });
-
-        // Initialize calendar
-        updateCalendar();
-
-    </script>
-    <script src="backend/assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="backend/assets/vendor/js/menu.js"></script>
-    <script src="assets/vendor/popper.js"></script>
-    <script src="assets/vendor/bootstrap.js"></script>
-    <script src="assets/vendor/perfect-scrollbar.js"></script>
+    <script src="http://127.0.0.1:8000/backend/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="http://127.0.0.1:8000/backend/assets/vendor/js/menu.js"></script>
+    <script src="http://127.0.0.1:8000/frontend/assets/vendor/popper.js"></script>
+    <script src="http://127.0.0.1:8000/frontend/assets/vendor/bootstrap.js"></script>
+    <script src="http://127.0.0.1:8000/frontend/assets/vendor/perfect-scrollbar.js"></script>
   
     <!-- Vendors JS -->
-    <script src="assets/vendor/apexcharts.js"></script>
+    <script src="http://127.0.0.1:8000/frontend/assets/vendor/apexcharts.js"></script>
   
     <!-- Main JS -->
-    <script src="backend/assets/js/main.js"></script>
+    <script src="http://127.0.0.1:8000/backend/assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="assets/dashboards-analytics.js"></script>
+    <script src="http://127.0.0.1:8000/frontend/assets/dashboards-analytics.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
@@ -1716,6 +2273,6 @@
 
     <!-- Form logout tersembunyi -->
     <form id="logout-form" action="/keluar" method="POST" style="display: none;">
-        <input type="hidden" name="_token" value="88aopAMXGPKWsHEIP1t8pxWQIxHcvsaFFUlOH0Xi" autocomplete="off">    </form> 
+        <input type="hidden" name="_token" value="atW4Z1gBkn9uPfmzHgogCqR9CuOJ74s7T97SVruo" autocomplete="off">    </form> 
   </body>
 </html>
